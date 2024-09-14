@@ -1,0 +1,52 @@
+﻿<Window x:Class="LibraryApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LibraryApp"
+        mc:Ignorable="d"
+        Title="Библиотека" Height="700" MaxHeight="700" Width="800" MaxWidth="800">
+    <Grid Background="#FFE4B89C" Height="700" Width="800" MaxHeight="700" MaxWidth="800">
+
+        <StackPanel Background="#FFFFE4D3" Height="630" Width="750" MaxHeight="630" MaxWidth="750">
+            <StackPanel.Effect>
+                <DropShadowEffect Color="#FFE6BDA6" BlurRadius="10" ShadowDepth="1" Direction="315" RenderingBias="Performance"/>
+            </StackPanel.Effect>
+        </StackPanel>
+
+
+        <Label Content="Добро пожаловать в мою библиотеку! " HorizontalAlignment="Left" Margin="247,2,0,0" VerticalAlignment="Top"  FontFamily="Franklin Gothic Medium" FontSize="20" Background="{x:Null}" Foreground="White" BorderBrush="#FFC78054" ClipToBounds="True" Width="376" RenderTransformOrigin="0.61,0.524">
+            <Label.Effect>
+                <DropShadowEffect Color="#FFF3AC7F" BlurRadius="10" ShadowDepth="1"/>
+            </Label.Effect>
+        </Label>
+
+
+        <ListView  x:Name="Information_ListView" Width="700" Height="500" ItemsSource="{Binding}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Номер" DisplayMemberBinding="{Binding Number}" Width="70"/>
+                    <GridViewColumn Header="Название" DisplayMemberBinding="{Binding Title}" Width="300"/>
+                    <GridViewColumn Header="Автор" DisplayMemberBinding="{Binding Genre}" Width="140"/>
+                    <GridViewColumn Header="Жанр" DisplayMemberBinding="{Binding Author}" Width="200"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+
+        <Button x:Name="AddBook_Button" Content="Добавить" HorizontalAlignment="Left" Margin="52,605,0,0" VerticalAlignment="Top" Height="47" Width="251" FontSize="20" Background="White" BorderBrush="#FFE8AF93" FontFamily="Franklin Gothic Medium" Foreground="#FFFFBB99" Click="AddBook_Button_Click"/>
+        <Button x:Name="DeletBook_Button" Content="Убрать" HorizontalAlignment="Left" Margin="499,605,0,48" Height="47" Width="251" FontSize="20" Background="White" BorderBrush="#FFE8AF93" FontFamily="Franklin Gothic Medium" Foreground="#FFFFBB99" Click="DeletBook_Button_Click"/>
+
+
+        <ComboBox x:Name="SortBook_ComboBox" FontSize="25" Foreground="Black" FontFamily="Tekton Pro Cond" Margin="52,52,494,605" SelectionChanged="SortBook_ComboBox_SelectionChanged">
+            <ComboBoxItem>Фантастика</ComboBoxItem>
+            <ComboBoxItem>Научная фантастика</ComboBoxItem>
+            <ComboBoxItem>Роман</ComboBoxItem>
+            <ComboBoxItem>Приключения</ComboBoxItem>
+            <ComboBoxItem>Все жанры</ComboBoxItem>
+        </ComboBox>
+        
+        <TextBox x:Name="FindBook_TextBox" FontSize="25" HorizontalAlignment="Left"  TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="254" Height="43" BorderBrush="#FFE1B396" Margin="496,52,0,0" TextChanged="FindBook_TextBox_TextChanged"/>
+
+    </Grid>
+</Window>
