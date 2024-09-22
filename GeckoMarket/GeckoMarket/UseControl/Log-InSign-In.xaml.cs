@@ -1,5 +1,4 @@
-﻿using GeckoMarket.UseControl;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,11 +13,11 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace GeckoMarket
+namespace GeckoMarket.UseControl
 {
-    public partial class MainWindow : Window
+    public partial class Log_InSign_In : UserControl
     {
-        public MainWindow()
+        public Log_InSign_In()
         {
             InitializeComponent();
         }
