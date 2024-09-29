@@ -1,18 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\\u0421# \u0438 \u0421\u002B\u002B \u0438 HTML\\C#\\AppWPF\\GeckoMarket\\",
+  "WorkspaceRootPath": "D:\\\u0421# \u0421\u002B\u002B HTML\\C#\\GeckoMarket\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{90E16A91-EB97-4DC5-AD47-63EA5823E861}|GeckoMarket\\GeckoMarket.csproj|d:\\\u0441# \u0438 \u0441\u002B\u002B \u0438 html\\c#\\appwpf\\geckomarket\\geckomarket\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{90E16A91-EB97-4DC5-AD47-63EA5823E861}|GeckoMarket\\GeckoMarket.csproj|solutionrelative:geckomarket\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{4D49B1C0-F07B-4895-AEFB-BEB93D215893}|GeckoMarket\\GeckoMarket.csproj|d:\\\u0441# \u0441\u002B\u002B html\\c#\\geckomarket\\geckomarket\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D49B1C0-F07B-4895-AEFB-BEB93D215893}|GeckoMarket\\GeckoMarket.csproj|solutionrelative:geckomarket\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{90E16A91-EB97-4DC5-AD47-63EA5823E861}|GeckoMarket\\GeckoMarket.csproj|d:\\\u0441# \u0438 \u0441\u002B\u002B \u0438 html\\c#\\appwpf\\geckomarket\\geckomarket\\usecontrol\\log-insign-in.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{90E16A91-EB97-4DC5-AD47-63EA5823E861}|GeckoMarket\\GeckoMarket.csproj|solutionrelative:geckomarket\\usecontrol\\log-insign-in.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{4D49B1C0-F07B-4895-AEFB-BEB93D215893}|GeckoMarket\\GeckoMarket.csproj|d:\\\u0441# \u0441\u002B\u002B html\\c#\\geckomarket\\geckomarket\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4D49B1C0-F07B-4895-AEFB-BEB93D215893}|GeckoMarket\\GeckoMarket.csproj|solutionrelative:geckomarket\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{90E16A91-EB97-4DC5-AD47-63EA5823E861}|GeckoMarket\\GeckoMarket.csproj|D:\\\u0421# \u0438 \u0421\u002B\u002B \u0438 HTML\\C#\\AppWPF\\GeckoMarket\\geckomarket\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{90E16A91-EB97-4DC5-AD47-63EA5823E861}|GeckoMarket\\GeckoMarket.csproj|solutionrelative:geckomarket\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4D49B1C0-F07B-4895-AEFB-BEB93D215893}|GeckoMarket\\GeckoMarket.csproj|d:\\\u0441# \u0441\u002B\u002B html\\c#\\geckomarket\\geckomarket\\usecontrol\\logsignin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4D49B1C0-F07B-4895-AEFB-BEB93D215893}|GeckoMarket\\GeckoMarket.csproj|solutionrelative:geckomarket\\usecontrol\\logsignin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,43 +22,43 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Log-InSign-In.xaml",
-              "DocumentMoniker": "D:\\\u0421# \u0438 \u0421\u002B\u002B \u0438 HTML\\C#\\AppWPF\\GeckoMarket\\GeckoMarket\\UseControl\\Log-InSign-In.xaml",
-              "RelativeDocumentMoniker": "GeckoMarket\\UseControl\\Log-InSign-In.xaml",
-              "ToolTip": "D:\\\u0421# \u0438 \u0421\u002B\u002B \u0438 HTML\\C#\\AppWPF\\GeckoMarket\\GeckoMarket\\UseControl\\Log-InSign-In.xaml",
-              "RelativeToolTip": "GeckoMarket\\UseControl\\Log-InSign-In.xaml",
+              "DocumentIndex": 2,
+              "Title": "LogSignIn.xaml",
+              "DocumentMoniker": "D:\\\u0421# \u0421\u002B\u002B HTML\\C#\\GeckoMarket\\GeckoMarket\\UseControl\\LogSignIn.xaml",
+              "RelativeDocumentMoniker": "GeckoMarket\\UseControl\\LogSignIn.xaml",
+              "ToolTip": "D:\\\u0421# \u0421\u002B\u002B HTML\\C#\\GeckoMarket\\GeckoMarket\\UseControl\\LogSignIn.xaml",
+              "RelativeToolTip": "GeckoMarket\\UseControl\\LogSignIn.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-09-22T13:17:24.452Z",
+              "WhenOpened": "2024-09-29T11:38:02.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\\u0421# \u0421\u002B\u002B HTML\\C#\\GeckoMarket\\GeckoMarket\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "GeckoMarket\\MainWindow.xaml",
+              "ToolTip": "D:\\\u0421# \u0421\u002B\u002B HTML\\C#\\GeckoMarket\\GeckoMarket\\MainWindow.xaml",
+              "RelativeToolTip": "GeckoMarket\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-29T10:55:54.444Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "D:\\\u0421# \u0438 \u0421\u002B\u002B \u0438 HTML\\C#\\AppWPF\\GeckoMarket\\GeckoMarket\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "GeckoMarket\\MainWindow.xaml",
-              "ToolTip": "D:\\\u0421# \u0438 \u0421\u002B\u002B \u0438 HTML\\C#\\AppWPF\\GeckoMarket\\GeckoMarket\\MainWindow.xaml",
-              "RelativeToolTip": "GeckoMarket\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-09-17T16:09:15.955Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "D:\\\u0421# \u0438 \u0421\u002B\u002B \u0438 HTML\\C#\\AppWPF\\GeckoMarket\\GeckoMarket\\MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\\u0421# \u0421\u002B\u002B HTML\\C#\\GeckoMarket\\GeckoMarket\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "GeckoMarket\\MainWindow.xaml.cs",
-              "ToolTip": "D:\\\u0421# \u0438 \u0421\u002B\u002B \u0438 HTML\\C#\\AppWPF\\GeckoMarket\\GeckoMarket\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\\u0421# \u0421\u002B\u002B HTML\\C#\\GeckoMarket\\GeckoMarket\\MainWindow.xaml.cs",
               "RelativeToolTip": "GeckoMarket\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T16:09:13.123Z",
+              "WhenOpened": "2024-09-29T10:55:51.582Z",
               "EditorCaption": ""
             }
           ]

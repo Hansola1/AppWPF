@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35303.130
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeckoMarket", "GeckoMarket\GeckoMarket.csproj", "{90E16A91-EB97-4DC5-AD47-63EA5823E861}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeckoMarket", "GeckoMarket\GeckoMarket.csproj", "{4D49B1C0-F07B-4895-AEFB-BEB93D215893}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{90E16A91-EB97-4DC5-AD47-63EA5823E861}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{90E16A91-EB97-4DC5-AD47-63EA5823E861}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{90E16A91-EB97-4DC5-AD47-63EA5823E861}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{90E16A91-EB97-4DC5-AD47-63EA5823E861}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D49B1C0-F07B-4895-AEFB-BEB93D215893}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D49B1C0-F07B-4895-AEFB-BEB93D215893}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D49B1C0-F07B-4895-AEFB-BEB93D215893}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D49B1C0-F07B-4895-AEFB-BEB93D215893}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {516B4E33-BC31-45D8-B19C-1D2113026C2B}
+		SolutionGuid = {4525F528-E165-4732-9AE8-5DC084E22F9C}
 	EndGlobalSection
 EndGlobal
