@@ -5,95 +5,127 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GeckoCalculator"
         mc:Ignorable="d"
-        Title="GeckoCalculator" Height="1080" Width="1440">
+        Title="GeckoCalculator" Height="800" Width="1440">
     <Grid>
-        <Button Content="Применить" HorizontalAlignment="Left" Margin="142,804,0,0" VerticalAlignment="Top" Width="207" Height="67" FontSize="36"/>
+        <Button x:Name="apply_button" Click="apply_click" Content="Применить" HorizontalAlignment="Left" Margin="142,654,0,0" VerticalAlignment="Top" Width="181" Height="40" FontSize="25"/>
 
-        <TextBlock HorizontalAlignment="Left" Margin="140,17,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" FontWeight="Bold"><Run Language="ru-ru" Text="Самец"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="743,17,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" FontWeight="Bold"><Run Language="ru-ru" Text="Самка"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="140,17,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="30" FontWeight="Bold"><Run Language="ru-ru" Text="Самец"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="743,17,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="30" FontWeight="Bold"><Run Language="ru-ru" Text="Самка"/></TextBlock>
 
-        <TextBlock HorizontalAlignment="Left" Margin="140,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="30"><Run Language="ru-ru" Text="Доминантный"/></TextBlock>
-        <ComboBox HorizontalAlignment="Left" Margin="140,160,0,0" VerticalAlignment="Top" Width="207" Height="47" FontSize="30"/>
-        <ComboBox HorizontalAlignment="Left" Margin="378,160,0,0" VerticalAlignment="Top" Width="213" Height="47" FontSize="30"/>
+        <TextBlock HorizontalAlignment="Left" Margin="140,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="25"><Run Language="ru-ru" Text="Доминантный"/></TextBlock>
+        <ComboBox x:Name="EnigmaMale_ComboBox" HorizontalAlignment="Left" Margin="140,160,0,0" VerticalAlignment="Top" Width="146" Height="30" FontSize="15">
+            <ComboBoxItem Content="Enigma"/>
+        </ComboBox>
 
-        <TextBlock HorizontalAlignment="Left" Margin="742,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="30"><Run Language="ru-ru" Text="Доминантный"/></TextBlock>
-        <ComboBox HorizontalAlignment="Left" Margin="736,160,0,0" VerticalAlignment="Top" Width="207" Height="47" FontSize="30"/>
-        <ComboBox HorizontalAlignment="Left" Margin="981,160,0,0" VerticalAlignment="Top" Width="213" Height="47" FontSize="30"/>
+        <ComboBox x:Name="WhiteYellowMale_ComboBox" HorizontalAlignment="Left" Margin="378,160,0,0" VerticalAlignment="Top" Width="159" Height="30" FontSize="15">
+            <ComboBoxItem Content="White x Yellow"/>
+        </ComboBox>
 
-        <TextBlock HorizontalAlignment="Left" Margin="142,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="30"><Run Language="ru-ru" Text="КО - "/><Run Text="Доминантный"/></TextBlock>
-        <ComboBox HorizontalAlignment="Left" Margin="140,357,0,0" VerticalAlignment="Top" Width="207" Height="47" FontSize="30"/>
-        <ComboBox HorizontalAlignment="Left" Margin="378,357,0,0" VerticalAlignment="Top" Width="213" Height="47" FontSize="30"/>
+        <TextBlock HorizontalAlignment="Left" Margin="742,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="25"><Run Language="ru-ru" Text="Доминантный"/></TextBlock>
+        <ComboBox x:Name="EnigmaFemale_ComboBox" HorizontalAlignment="Left" Margin="736,160,0,0" VerticalAlignment="Top" Width="149" Height="30" FontSize="15">
+            <ComboBoxItem Content="Enigma"/>
+        </ComboBox>
+        <ComboBox x:Name="WhiteYellowFemale_ComboBox" HorizontalAlignment="Left" Margin="981,160,0,0" VerticalAlignment="Top" Width="149" Height="30" FontSize="15">
+            <ComboBoxItem Content="White x Yellow"/>
+        </ComboBox>
 
-        <TextBlock HorizontalAlignment="Left" Margin="736,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="30"><Run Language="ru-ru" Text="КО - "/><Run Text="Доминантный"/></TextBlock>
-        <ComboBox HorizontalAlignment="Left" Margin="736,357,0,0" VerticalAlignment="Top" Width="207" Height="47" FontSize="30"/>
-        <ComboBox HorizontalAlignment="Left" Margin="981,358,0,0" VerticalAlignment="Top" Width="213" Height="46" FontSize="30"/>
+        <TextBlock HorizontalAlignment="Left" Margin="140,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="25"><Run Language="ru-ru" Text="КО - "/><Run Text="Доминантный"/></TextBlock>
+        <ComboBox x:Name="MackSnowMale_ComboBox" HorizontalAlignment="Left" Margin="140,290,0,0" VerticalAlignment="Top" Width="149" Height="30" FontSize="15">
+            <ComboBoxItem Content="Mack snow"/>
+            <ComboBoxItem Content="Super snow"/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" Margin="383,290,0,0" VerticalAlignment="Top" Width="149" Height="30" FontSize="15">
+            <ComboBoxItem x:Name="LemonFrostMale_ComboBox" Content="Lemon frost"/>
+            <ComboBoxItem x:Name="SuperLemonMale_ComboBox" Content="Super lemon"/>
+        </ComboBox>
 
-        <TextBlock HorizontalAlignment="Left" Margin="140,450,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="30" RenderTransformOrigin="0.518,0.908"><Run Language="ru-ru" Text="Рецессивный"/></TextBlock>
-        <ComboBox HorizontalAlignment="Left" Margin="140,532,0,0" VerticalAlignment="Top" Width="207" Height="47" FontSize="30"/>
-        <ComboBox HorizontalAlignment="Left" Margin="378,532,0,0" VerticalAlignment="Top" Width="213" Height="47" FontSize="30"/>
-        <ComboBox HorizontalAlignment="Left" Margin="142,630,0,0" VerticalAlignment="Top" Width="207" Height="47" FontSize="30"/>
-        <ComboBox HorizontalAlignment="Left" Margin="381,630,0,0" VerticalAlignment="Top" Width="207" Height="46" FontSize="30"/>
-        <ComboBox HorizontalAlignment="Left" Margin="142,724,0,0" VerticalAlignment="Top" Width="207" Height="47" FontSize="30"/>
-        <ComboBox HorizontalAlignment="Left" Margin="381,724,0,0" VerticalAlignment="Top" Width="207" Height="47" FontSize="30"/>
+        <TextBlock HorizontalAlignment="Left" Margin="742,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="25"><Run Language="ru-ru" Text="КО - "/><Run Text="Доминантный"/></TextBlock>
+        <ComboBox x:Name="MackSnowFemale_ComboBox" HorizontalAlignment="Left" Margin="736,290,0,0" VerticalAlignment="Top" Width="149" Height="30" FontSize="15">
+            <ComboBoxItem Content="Mack snow"/>
+            <ComboBoxItem Content="Super snow"/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" Margin="981,290,0,0" VerticalAlignment="Top" Width="149" Height="30" FontSize="15">
+            <ComboBoxItem  x:Name="LemonFrostFemale_ComboBox"  Content="Lemon frost"/>
+            <ComboBoxItem x:Name="SuperLemonFemale_ComboBox" Content="Super lemon"/>
+        </ComboBox>
 
-        <TextBlock HorizontalAlignment="Left" Margin="742,450,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="30"><Run Language="ru-ru" Text="Рецессивный"/></TextBlock>
-        <ComboBox HorizontalAlignment="Left" Margin="743,541,0,0" VerticalAlignment="Top" Width="207" Height="47" FontSize="30"/>
-        <ComboBox HorizontalAlignment="Left" Margin="981,542,0,0" VerticalAlignment="Top" Width="213" Height="46" FontSize="30"/>
-        <ComboBox HorizontalAlignment="Left" Margin="743,630,0,0" VerticalAlignment="Top" Width="207" Height="46" FontSize="30"/>
-        <ComboBox HorizontalAlignment="Left" Margin="981,630,0,0" VerticalAlignment="Top" Width="207" Height="46" FontSize="30"/>
-        <ComboBox HorizontalAlignment="Left" Margin="743,723,0,0" VerticalAlignment="Top" Width="207" Height="48" FontSize="30"/>
-        <ComboBox HorizontalAlignment="Left" Margin="981,723,0,0" VerticalAlignment="Top" Width="207" Height="48" FontSize="30"/>
+        <TextBlock HorizontalAlignment="Left" Margin="139,353,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="25" RenderTransformOrigin="0.518,0.908"><Run Language="ru-ru" Text="Рецессивный"/></TextBlock>
+        <ComboBox HorizontalAlignment="Left" Margin="140,424,0,0" VerticalAlignment="Top" Width="149" Height="30" FontSize="15">
+            <ComboBoxItem x:Name="TremperAlbinoMale_ComboBox" Content="Tremper albino"/>
+            <ComboBoxItem x:Name="HetTremperAlbinoMale_ComboBox" Content="het Tremper albino"/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" Margin="378,424,0,0" VerticalAlignment="Top" Width="149" Height="30" FontSize="15">
+            <ComboBoxItem x:Name="BellAlbinoMale_ComboBox" Content="Bell albino"/>
+            <ComboBoxItem x:Name="HetBellAlbinoMale_ComboBox" Content="het Bell albino"/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" Margin="139,509,0,0" VerticalAlignment="Top" Width="149" Height="30" FontSize="15">
+            <ComboBoxItem x:Name="RainwaterMale_ComboBox" Content="Rainwater albino"/>
+            <ComboBoxItem x:Name="HetRainwaterMale_ComboBox" Content="het Rainwater albino"/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" Margin="378,509,0,0" VerticalAlignment="Top" Width="149" Height="30" FontSize="15">
+            <ComboBoxItem x:Name="EclipseMale_ComboBox" Content="Eclipse"/>
+            <ComboBoxItem x:Name="HetEclipseMale_ComboBox" Content="het Eclipse"/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" Margin="137,596,0,0" VerticalAlignment="Top" Width="149" Height="30" FontSize="15">
+            <ComboBoxItem x:Name="BlizzardMale_ComboBox" Content="BLizzard"/>
+            <ComboBoxItem x:Name="HetBlizzardMale_ComboBox" Content="het Blizzard"/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" Margin="376,596,0,0" VerticalAlignment="Top" Width="149" Height="30" FontSize="15">
+            <ComboBoxItem x:Name="PatternlessMale_ComboBox" Content="Patternless"/>
+            <ComboBoxItem x:Name="HetPatternlessMale_ComboBox" Content="het Patternless"/>
+        </ComboBox>
 
-        <TextBlock HorizontalAlignment="Left" Margin="142,916,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36"><Run Language="ru-ru" Text="Результат:"/></TextBlock>
-        <RadioButton Content="" HorizontalAlignment="Center" Margin="0,176,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" FontSize="10" Width="14" />
-        <RadioButton Content="" HorizontalAlignment="Center" Margin="0,366,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" FontSize="10" Width="14" />
-        <RadioButton Content="" HorizontalAlignment="Left" Margin="720,558,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" FontSize="10" Width="14" />
-        <RadioButton Content="" HorizontalAlignment="Left" Margin="720,642,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" FontSize="10" Width="14" />
-        <RadioButton Content="" HorizontalAlignment="Left" Margin="720,729,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" FontSize="10" Width="14" />
+        <TextBlock HorizontalAlignment="Left" Margin="743,353,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="25"><Run Language="ru-ru" Text="Рецессивный"/></TextBlock>
+        <ComboBox HorizontalAlignment="Left" Margin="736,435,0,0" VerticalAlignment="Top" Width="149" Height="30" FontSize="15">
+            <ComboBoxItem x:Name="TremperAlbinoFemale_ComboBox" Content="Tremper albino"/>
+            <ComboBoxItem x:Name="HetTremperAlbinoFemale_ComboBox" Content="het Tremper albino"/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" Margin="981,434,0,0" VerticalAlignment="Top" Width="149" Height="30" FontSize="15">
+            <ComboBoxItem x:Name="BellAlbinoFemale_ComboBox" Content="Bell albino"/>
+            <ComboBoxItem x:Name="HetBellAlbinoFemale_ComboBox" Content="het Bell albino"/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" Margin="740,509,0,0" VerticalAlignment="Top" Width="149" Height="30" FontSize="15">
+            <ComboBoxItem x:Name="RainwaterFemale_ComboBox" Content="Rainwater albino"/>
+            <ComboBoxItem x:Name="HetRainwaterFemale_ComboBox" Content="het Rainwater albino"/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" Margin="981,509,0,0" VerticalAlignment="Top" Width="149" Height="30" FontSize="15">
+            <ComboBoxItem x:Name="EclipseFemale_ComboBox" Content="Eclipse"/>
+            <ComboBoxItem x:Name="HetEclipseFemale_ComboBox" Content="het Eclipse"/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" Margin="743,593,0,0" VerticalAlignment="Top" Width="149" Height="30" FontSize="15">
+            <ComboBoxItem x:Name="BlizzardFemale_ComboBox" Content="BLizzard"/>
+            <ComboBoxItem x:Name="HetBlizzardFemale_ComboBox" Content="het Blizzard"/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" Margin="981,595,0,0" VerticalAlignment="Top" Width="149" Height="30" FontSize="15">
+            <ComboBoxItem x:Name="PatternlessFemale_ComboBox" Content="Patternless"/>
+            <ComboBoxItem x:Name="HetPatternlessFemale_ComboBox" Content="het Patternless"/>
+        </ComboBox>
 
-        <RadioButton Content="" HorizontalAlignment="Left" Margin="108,174,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" FontSize="10" Width="14" />
-        <RadioButton Content="" HorizontalAlignment="Left" Margin="108,374,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" FontSize="10" Width="14" />
-        <RadioButton Content="" HorizontalAlignment="Left" Margin="108,551,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" FontSize="10" Width="14" />
-        <RadioButton Content="" HorizontalAlignment="Left" Margin="108,649,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" FontSize="10" Width="14" />
-        <RadioButton Content="" HorizontalAlignment="Left" Margin="108,729,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" FontSize="10" Width="14" />
+        <TextBlock HorizontalAlignment="Left" Margin="147,699,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="30"><Run Language="ru-ru" Text="Результат:"/></TextBlock>
 
-        <RadioButton Content="" HorizontalAlignment="Left" Margin="359,176,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" FontSize="10" Width="14" />
-        <RadioButton Content="" HorizontalAlignment="Left" Margin="359,374,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" FontSize="10" Width="14" />
-        <RadioButton Content="" HorizontalAlignment="Left" Margin="360,551,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" FontSize="10" Width="14" />
-        <RadioButton Content="" HorizontalAlignment="Left" Margin="359,649,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" FontSize="10" Width="14" />
-        <RadioButton Content="" HorizontalAlignment="Left" Margin="359,732,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" FontSize="10" Width="14" />
-
-        <RadioButton Content="" HorizontalAlignment="Left" Margin="956,178,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" FontSize="10" Width="14" />
-        <RadioButton Content="" HorizontalAlignment="Left" Margin="956,374,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" FontSize="10" Width="14" />
-        <RadioButton Content="" HorizontalAlignment="Left" Margin="956,562,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" FontSize="10" Width="14" />
-        <RadioButton Content="" HorizontalAlignment="Left" Margin="956,642,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" FontSize="10" Width="14" />
-        <RadioButton Content="" HorizontalAlignment="Left" Margin="956,732,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" FontSize="10" Width="14" />
-        <TextBox HorizontalAlignment="Left" Margin="142,969,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1052" Height="64" BorderBrush="#FF798197" Background="#FFF6F6F6"/>
+        <TextBox HorizontalAlignment="Left" Margin="148,744,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1044" Height="30" BorderBrush="#FF798197" Background="#FFF6F6F6"/>
 
         <TextBlock HorizontalAlignment="Left" Margin="739,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Text="Enigma"/>
         <TextBlock HorizontalAlignment="Left" Margin="981,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Text="White x Yellow"/>
-        <TextBlock HorizontalAlignment="Left" Margin="739,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Text="Mack Snow"/>
-        <TextBlock HorizontalAlignment="Left" Margin="990,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Text="Lemon Frost"/>
-        <TextBlock HorizontalAlignment="Left" Margin="742,505,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Text="Tremper Albino"/>
-        <TextBlock HorizontalAlignment="Left" Margin="981,505,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Text="Bell albino"/>
-        <TextBlock HorizontalAlignment="Left" Margin="743,603,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Text="Rainwater albino"/>
-        <TextBlock HorizontalAlignment="Left" Margin="981,603,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Text="Eclipse"/>
-        <TextBlock HorizontalAlignment="Left" Margin="981,691,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Text="Patternless"/>
-        <TextBlock HorizontalAlignment="Left" Margin="744,691,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Text="Blizzard"/>
+        <TextBlock HorizontalAlignment="Left" Margin="745,252,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Text="Mack Snow"/>
+        <TextBlock HorizontalAlignment="Left" Margin="996,252,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Text="Lemon Frost"/>
+        <TextBlock HorizontalAlignment="Left" Margin="742,397,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Text="Tremper Albino"/>
+        <TextBlock HorizontalAlignment="Left" Margin="981,397,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Text="Bell albino"/>
+        <TextBlock HorizontalAlignment="Left" Margin="740,482,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Text="Rainwater albino"/>
+        <TextBlock HorizontalAlignment="Left" Margin="978,482,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Text="Eclipse"/>
+        <TextBlock HorizontalAlignment="Left" Margin="976,563,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Text="Patternless"/>
+        <TextBlock HorizontalAlignment="Left" Margin="739,563,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Text="Blizzard"/>
 
-        <TextBlock HorizontalAlignment="Left" Margin="142,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Text="Enigma"/>
-        <TextBlock HorizontalAlignment="Left" Margin="384,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Text="White x Yellow"/>
-        <TextBlock HorizontalAlignment="Left" Margin="142,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Text="Mack Snow"/>
-        <TextBlock HorizontalAlignment="Left" Margin="378,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Text="Lemon Frost"/>
-        <TextBlock HorizontalAlignment="Left" Margin="142,500,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Text="Tremper Albino"/>
-        <TextBlock HorizontalAlignment="Left" Margin="378,500,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Text="Bell albino"/>
-        <TextBlock HorizontalAlignment="Left" Margin="142,598,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Text="Rainwater albino"/>
-        <TextBlock HorizontalAlignment="Left" Margin="142,691,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Text="Blizzard"/>
-        <TextBlock HorizontalAlignment="Left" Margin="381,697,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Text="Patternless"/>
-        <TextBlock HorizontalAlignment="Left" Margin="381,603,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Text="Eclipse"/>
-
-
-
+        <TextBlock HorizontalAlignment="Left" Margin="139,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Text="Enigma"/>
+        <TextBlock HorizontalAlignment="Left" Margin="375,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Text="White x Yellow"/>
+        <TextBlock HorizontalAlignment="Left" Margin="148,252,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Text="Mack Snow"/>
+        <TextBlock HorizontalAlignment="Left" Margin="384,252,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Text="Lemon Frost"/>
+        <TextBlock HorizontalAlignment="Left" Margin="142,392,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Text="Tremper Albino"/>
+        <TextBlock HorizontalAlignment="Left" Margin="378,392,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Text="Bell albino"/>
+        <TextBlock HorizontalAlignment="Left" Margin="139,477,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Text="Rainwater albino"/>
+        <TextBlock HorizontalAlignment="Left" Margin="137,563,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Text="Blizzard"/>
+        <TextBlock HorizontalAlignment="Left" Margin="376,569,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Text="Patternless"/>
+        <TextBlock HorizontalAlignment="Left" Margin="378,482,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Text="Eclipse"/>
 
     </Grid>
 </Window>
