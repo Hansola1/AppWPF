@@ -11,15 +11,13 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("GeckoCalculator")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("СonsoleGemiteconicsCalculator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2cf5ba6a4ff0c955f1d243986776f67b2e891f87")]
-[assembly: System.Reflection.AssemblyProductAttribute("GeckoCalculator")]
-[assembly: System.Reflection.AssemblyTitleAttribute("GeckoCalculator")]
+[assembly: System.Reflection.AssemblyProductAttribute("СonsoleGemiteconicsCalculator")]
+[assembly: System.Reflection.AssemblyTitleAttribute("СonsoleGemiteconicsCalculator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
-[assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]
-[assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")]
 
 // Создано классом WriteCodeFragment MSBuild.
 

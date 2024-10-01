@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "D:\\\u0421# \u0421\u002B\u002B HTML\\C#\\AppWPF\\GeckoCalculator\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B3002977-7035-4B27-A8DE-80085067DEDF}|GeckoCalculator\\GeckoCalculator.csproj|d:\\\u0441# \u0441\u002B\u002B html\\c#\\appwpf\\geckocalculator\\geckocalculator\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{B3002977-7035-4B27-A8DE-80085067DEDF}|GeckoCalculator\\GeckoCalculator.csproj|solutionrelative:geckocalculator\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B3002977-7035-4B27-A8DE-80085067DEDF}|GeckoCalculator\\GeckoCalculator.csproj|d:\\\u0441# \u0441\u002B\u002B html\\c#\\appwpf\\geckocalculator\\geckocalculator\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B3002977-7035-4B27-A8DE-80085067DEDF}|GeckoCalculator\\GeckoCalculator.csproj|solutionrelative:geckocalculator\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -23,6 +19,10 @@
       "RelativeMoniker": "D:0:0:{B3002977-7035-4B27-A8DE-80085067DEDF}|GeckoCalculator\\GeckoCalculator.csproj|solutionrelative:geckocalculator\\calculategenotype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{B3002977-7035-4B27-A8DE-80085067DEDF}|GeckoCalculator\\GeckoCalculator.csproj|d:\\\u0441# \u0441\u002B\u002B html\\c#\\appwpf\\geckocalculator\\geckocalculator\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B3002977-7035-4B27-A8DE-80085067DEDF}|GeckoCalculator\\GeckoCalculator.csproj|solutionrelative:geckocalculator\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B3002977-7035-4B27-A8DE-80085067DEDF}|GeckoCalculator\\GeckoCalculator.csproj|d:\\\u0441# \u0441\u002B\u002B html\\c#\\appwpf\\geckocalculator\\geckocalculator\\gen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B3002977-7035-4B27-A8DE-80085067DEDF}|GeckoCalculator\\GeckoCalculator.csproj|solutionrelative:geckocalculator\\gen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -34,24 +34,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "CalculateGenotype.cs",
               "DocumentMoniker": "D:\\\u0421# \u0421\u002B\u002B HTML\\C#\\AppWPF\\GeckoCalculator\\GeckoCalculator\\CalculateGenotype.cs",
               "RelativeDocumentMoniker": "GeckoCalculator\\CalculateGenotype.cs",
               "ToolTip": "D:\\\u0421# \u0421\u002B\u002B HTML\\C#\\AppWPF\\GeckoCalculator\\GeckoCalculator\\CalculateGenotype.cs",
               "RelativeToolTip": "GeckoCalculator\\CalculateGenotype.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAxwBsAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAxwBwAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-30T16:31:43.986Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Result.cs",
               "DocumentMoniker": "D:\\\u0421# \u0421\u002B\u002B HTML\\C#\\AppWPF\\GeckoCalculator\\GeckoCalculator\\Result.cs",
               "RelativeDocumentMoniker": "GeckoCalculator\\Result.cs",
@@ -77,7 +77,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Parent.cs",
               "DocumentMoniker": "D:\\\u0421# \u0421\u002B\u002B HTML\\C#\\AppWPF\\GeckoCalculator\\GeckoCalculator\\Parent.cs",
               "RelativeDocumentMoniker": "GeckoCalculator\\Parent.cs",
@@ -90,25 +90,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "D:\\\u0421# \u0421\u002B\u002B HTML\\C#\\AppWPF\\GeckoCalculator\\GeckoCalculator\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "GeckoCalculator\\MainWindow.xaml.cs",
               "ToolTip": "D:\\\u0421# \u0421\u002B\u002B HTML\\C#\\AppWPF\\GeckoCalculator\\GeckoCalculator\\MainWindow.xaml.cs",
               "RelativeToolTip": "GeckoCalculator\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAuwFEAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAADoAAAAAAAAAAAAUwEoAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-29T15:40:37.074Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\\u0421# \u0421\u002B\u002B HTML\\C#\\AppWPF\\GeckoCalculator\\GeckoCalculator\\MainWindow.xaml",
               "RelativeDocumentMoniker": "GeckoCalculator\\MainWindow.xaml",
-              "ToolTip": "D:\\\u0421# \u0421\u002B\u002B HTML\\C#\\AppWPF\\GeckoCalculator\\GeckoCalculator\\MainWindow.xaml*",
-              "RelativeToolTip": "GeckoCalculator\\MainWindow.xaml*",
+              "ToolTip": "D:\\\u0421# \u0421\u002B\u002B HTML\\C#\\AppWPF\\GeckoCalculator\\GeckoCalculator\\MainWindow.xaml",
+              "RelativeToolTip": "GeckoCalculator\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-09-29T15:40:42.713Z",
               "EditorCaption": ""
