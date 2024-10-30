@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GeckoCalculator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2cf5ba6a4ff0c955f1d243986776f67b2e891f87")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fa85be879d6e61a960e7e1f164b021276a3c4f45")]
 [assembly: System.Reflection.AssemblyProductAttribute("GeckoCalculator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GeckoCalculator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
