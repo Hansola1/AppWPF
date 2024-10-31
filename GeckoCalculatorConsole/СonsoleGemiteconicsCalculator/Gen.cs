@@ -20,8 +20,9 @@ namespace СonsoleGemiteconicsCalculator
         public enum TypeGenEnum
         {
             Dominant,
-            Recessive,
-            CoDominant
+            CoDominant,
+            Recessive_homozygous,
+            Recessive_heterozygous,
         }
     }
 }

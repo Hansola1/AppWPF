@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("СonsoleGemiteconicsCalculator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fa85be879d6e61a960e7e1f164b021276a3c4f45")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7d70d07c02c0509e4c828506cf79d6de4b7dd5af")]
 [assembly: System.Reflection.AssemblyProductAttribute("СonsoleGemiteconicsCalculator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("СonsoleGemiteconicsCalculator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

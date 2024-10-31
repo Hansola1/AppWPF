@@ -47,7 +47,7 @@ namespace ConsoleGemiteconicsCalculator
             List<Gen> gens = new List<Gen>();
 
             Console.WriteLine($"\nДавайте заполним гены {parentType}. Закончить заполнение генов - \"Закончить\".");
-            Console.WriteLine("Список доступных гево: Wo, Zulu, Amel, Zero");
+            Console.WriteLine("Список доступных гево: Normal, Wo, Zulu, Amel");
 
             string genInput;
             while (true)
@@ -61,17 +61,17 @@ namespace ConsoleGemiteconicsCalculator
 
                 switch (genInput)
                 {
+                    case "normal":
+                        gens.Add(new Gen("Normal", Gen.TypeGenEnum.Dominant));
+                        break;
                     case "wo":
-                        gens.Add(new Gen("WO", Gen.TypeGenEnum.Dominant));
+                        gens.Add(new Gen("WO", Gen.TypeGenEnum.CoDominant));
                         break;
                     case "zulu":
-                        gens.Add(new Gen("Zulu", Gen.TypeGenEnum.Recessive));
+                        gens.Add(new Gen("Zulu", Gen.TypeGenEnum.Recessive_homozygous));
                         break;
                     case "amel":
-                        gens.Add(new Gen("Amel", Gen.TypeGenEnum.Recessive));
-                        break;
-                    case "zero":
-                        gens.Add(new Gen("Zero", Gen.TypeGenEnum.CoDominant));
+                        gens.Add(new Gen("Amel", Gen.TypeGenEnum.Recessive_homozygous));
                         break;
                     default:
                         Console.WriteLine("Некорректный ввод. Такого гена нет.");
@@ -94,24 +94,23 @@ namespace ConsoleGemiteconicsCalculator
             {
                 foreach (var maleGen in GenMale)
                 {
-                    if (femaleGen.TypeGen == Gen.TypeGenEnum.Dominant) 
+                    if (femaleGen.TypeGen == Gen.TypeGenEnum.Dominant || maleGen.TypeGen == Gen.TypeGenEnum.Dominant)
                     {
-                        // Если у самки доминантный ген, он проявится в потомстве
+                        // Если у самки или самца доминант ген, потомство 50% normal, 50% gen
                         genCombinations.Add(femaleGen.NameGen);
                     }
-                    else if (femaleGen.TypeGen == Gen.TypeGenEnum.Recessive && maleGen.TypeGen == Gen.TypeGenEnum.Recessive)
+                    else if (femaleGen.TypeGen == Gen.TypeGenEnum.Recessive_homozygous && maleGen.TypeGen == Gen.TypeGenEnum.Recessive_homozygous)
                     {
-                        // Если у самки и самца есть рецессивные гены, то потомство будет иметь рецессивный ген
+                        // Если у самки и самца есть гомо. рецесc. гены, то потомство 100% gen
                         genCombinations.Add(femaleGen.NameGen);
-                    }
-                    else if (femaleGen.TypeGen == Gen.TypeGenEnum.CoDominant || maleGen.TypeGen == Gen.TypeGenEnum.CoDominant)
-                    {
-                        // Если один из генов кодоминантный, то оба гена проявятся
-                        genCombinations.Add($"{femaleGen.NameGen}/{maleGen.NameGen}");
                     }
                 }
             }
             resultMorph(genCombinations, GenFemale, GenMale); 
+        }
+
+        private static void probability()
+        { 
         }
 
         private static void resultMorph(List<string> genCombinations, List<Gen> GenFemale, List<Gen> GenMale)
