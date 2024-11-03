@@ -1,42 +1,31 @@
-﻿<Window x:Class="GeckoMarket.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:GeckoMarket"
-        mc:Ignorable="d"
+        xmlns:UseControl="clr-namespace:GeckoMarket.UseControl" x:Class="GeckoMarket.MainWindow"
         Title="GeckoMarket" Height="800" Width="900"
         MaxHeight="800" MaxWidth="900">
-    
-    <Grid Background="White" Height="800" Width="900"
-        MaxHeight="800" MaxWidth="900">
 
-        <TextBlock FontSize="35" FontFamily="Franklin Gothic Demi" Margin="10,10,763,705"><Run Text="Hanso "/><LineBreak/><Run Text="Geckon"/></TextBlock>
+    <Grid Background="White">
+        <TextBlock FontSize="50" FontFamily="Franklin Gothic Demi" Text="GeckoMarket" Margin="57,20,-24,-1"/>
+        <TextBlock FontSize="20" FontFamily="Franklin Gothic Demi" Margin="57,73,-24,-54"><Run Language="ru-ru" Text="онлайн-магазин рептилий"/></TextBlock>
 
-        <TextBox x:Name="Find_TextBox" FontSize="25" HorizontalAlignment="Left"  TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="512" Height="51" BorderBrush="#FFE1B396" Margin="159,23,0,0"/>
-        <Button x:Name="Find_Button" Content="." HorizontalAlignment="Left" Margin="597,23,0,0" VerticalAlignment="Top" Height="51" Width="74"/>
+        <TextBlock FontSize="40" FontFamily="Franklin Gothic Demi" Margin="57,235,-24,-216"><Run Text="Откройте мир рептилий"/><LineBreak/><Run Text="в один клик"/></TextBlock>
 
-        <TabControl Margin="26,100,28,50">
-            <TabItem Header="Каталог" Width="200">
-                <StackPanel>
-                    <TextBlock Text="Content of Tab 1" />
-                    <Button Content="Click Me!" Width="100" />
-                </StackPanel>
-            </TabItem>
-            <TabItem Header="Избранное" Width="200">
-                <StackPanel>
-                    <TextBlock Text="Content of Tab 2" />
-                    <Button Content="Another Button" Width="150" />
-                </StackPanel>
-            </TabItem>
-            <TabItem Header="Корзина" Width="200">
-                <StackPanel>
-                    <TextBlock Text="Content of Tab 3" />
-                    <Button Content="Оформить заказ" Width="200" />
-                </StackPanel>
-            </TabItem>
-        </TabControl>
+        <Button Content="Каталог" HorizontalAlignment="Left" Margin="63,123,0,0" VerticalAlignment="Top" Height="44" Width="147" FontSize="20"/>
+        <Button Content="Корзина" HorizontalAlignment="Left" Margin="244,123,0,0" VerticalAlignment="Top" Height="44" Width="148" FontSize="20"/>
 
+        <UseControl:LogControl HorizontalAlignment="Left" Margin="395,27,0,0" VerticalAlignment="Top" Width="425"/>
+        <UseControl:SearchControl HorizontalAlignment="Left" Margin="63,342,0,0" VerticalAlignment="Top" Width="603"/>
+
+        <Image HorizontalAlignment="Left" Height="152" Margin="54,468,0,0" VerticalAlignment="Top" Width="167" Source="/10871573-kormovye-nasekomye-500x500.jpg"/>
+        <Image HorizontalAlignment="Left" Height="152" Margin="284,468,0,0" VerticalAlignment="Top" Width="167" Source="/10871573-kormovye-nasekomye-500x500.jpg"/>
+        <Image HorizontalAlignment="Left" Height="152" Margin="501,468,0,0" VerticalAlignment="Top" Width="168" Source="/10871573-kormovye-nasekomye-500x500.jpg"/>
+        <Image HorizontalAlignment="Left" Height="152" Margin="691,468,0,0" VerticalAlignment="Top" Width="168" Source="/10871573-kormovye-nasekomye-500x500.jpg"/>
+
+        <TextBlock FontSize="40" FontFamily="Franklin Gothic Demi" Margin="54,431,-21,-412"><Run Language="ru-ru" Text="Категории"/></TextBlock>
+        <Button Content="Смотреть каталог" HorizontalAlignment="Left" Margin="318,625,0,0" VerticalAlignment="Top" Height="44" Width="201" FontSize="20" RenderTransformOrigin="0.541,-0.113"/>
+
+        <TextBlock FontSize="25" FontFamily="Franklin Gothic Demi" Margin="54,703,-21,-684"><Run Language="ru-ru" Text="Связаться с нами"/></TextBlock>
+        <Button Content="Почта" HorizontalAlignment="Left" Margin="265,710,0,0" VerticalAlignment="Top" Height="23" Width="53" FontSize="10"/>
     </Grid>
 </Window>
-

@@ -7,15 +7,39 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="UseControl\LogSignIn.xaml.cs">
+    <Compile Update="CatalogWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="LogWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="RegWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UseControl\LogControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UseControl\SearchControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="CatalogWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="LogWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="UseControl\LogSignIn.xaml">
+    <Page Update="RegWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UseControl\LogControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UseControl\SearchControl.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

@@ -9,11 +9,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="10871573-kormovye-nasekomye-500x500.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="DataBase\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Image\10871573-kormovye-nasekomye-500x500.jpg" />
   </ItemGroup>
 
 </Project>
