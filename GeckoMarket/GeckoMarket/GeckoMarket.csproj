@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <None Remove="10871573-kormovye-nasekomye-500x500.jpg" />
+    <None Remove="Images\avatar.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -17,11 +18,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Avalonia.Controls.ColorPicker" Version="11.2.0" />
+    <PackageReference Include="MahApps.Metro.IconPacks.Material" Version="5.1.0" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.8" />
+    <PackageReference Include="PixiEditor.ColorPicker" Version="3.4.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Image\10871573-kormovye-nasekomye-500x500.jpg" />
+    <Resource Include="Images\10871573-kormovye-nasekomye-500x500.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\avatar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

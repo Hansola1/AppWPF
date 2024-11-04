@@ -53,7 +53,7 @@ namespace GeckoMarket {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/GeckoMarket;V1.0.0.0;component/regwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/GeckoMarket;component/regwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\RegWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -1,9 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "ydMZj4/Mfm4=",
+  "dgSpecHash": "KVcg/fdIPzw=",
   "success": true,
   "projectFilePath": "D:\\С# С++ HTML\\C#\\AppWPF\\GeckoMarket\\GeckoMarket\\GeckoMarket.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Анастасия\\.nuget\\packages\\avalonia\\11.2.0\\avalonia.11.2.0.nupkg.sha512",
+    "C:\\Users\\Анастасия\\.nuget\\packages\\avalonia.buildservices\\0.0.29\\avalonia.buildservices.0.0.29.nupkg.sha512",
+    "C:\\Users\\Анастасия\\.nuget\\packages\\avalonia.controls.colorpicker\\11.2.0\\avalonia.controls.colorpicker.11.2.0.nupkg.sha512",
+    "C:\\Users\\Анастасия\\.nuget\\packages\\avalonia.remote.protocol\\11.2.0\\avalonia.remote.protocol.11.2.0.nupkg.sha512",
+    "C:\\Users\\Анастасия\\.nuget\\packages\\mahapps.metro.iconpacks.core\\5.1.0\\mahapps.metro.iconpacks.core.5.1.0.nupkg.sha512",
+    "C:\\Users\\Анастасия\\.nuget\\packages\\mahapps.metro.iconpacks.material\\5.1.0\\mahapps.metro.iconpacks.material.5.1.0.nupkg.sha512",
+    "C:\\Users\\Анастасия\\.nuget\\packages\\microcom.runtime\\0.11.0\\microcom.runtime.0.11.0.nupkg.sha512",
     "C:\\Users\\Анастасия\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.8\\microsoft.entityframeworkcore.8.0.8.nupkg.sha512",
     "C:\\Users\\Анастасия\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.8\\microsoft.entityframeworkcore.abstractions.8.0.8.nupkg.sha512",
     "C:\\Users\\Анастасия\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.8\\microsoft.entityframeworkcore.analyzers.8.0.8.nupkg.sha512",
@@ -17,8 +24,11 @@
     "C:\\Users\\Анастасия\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\Анастасия\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",
     "C:\\Users\\Анастасия\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "C:\\Users\\Анастасия\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.31\\microsoft.xaml.behaviors.wpf.1.1.31.nupkg.sha512",
     "C:\\Users\\Анастасия\\.nuget\\packages\\npgsql\\8.0.4\\npgsql.8.0.4.nupkg.sha512",
-    "C:\\Users\\Анастасия\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\8.0.8\\npgsql.entityframeworkcore.postgresql.8.0.8.nupkg.sha512"
+    "C:\\Users\\Анастасия\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\8.0.8\\npgsql.entityframeworkcore.postgresql.8.0.8.nupkg.sha512",
+    "C:\\Users\\Анастасия\\.nuget\\packages\\pixieditor.colorpicker\\3.4.1\\pixieditor.colorpicker.3.4.1.nupkg.sha512",
+    "C:\\Users\\Анастасия\\.nuget\\packages\\system.text.json\\8.0.5\\system.text.json.8.0.5.nupkg.sha512"
   ],
   "logs": []
 }

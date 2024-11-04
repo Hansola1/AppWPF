@@ -7,39 +7,51 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="CatalogWindow.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="LogWindow.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="RegWindow.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="UseControl\LogControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="UseControl\SearchControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\BasketPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\CatalogPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\LogInPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ProfilePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\RegistrationPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="CatalogWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="LogWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="MainWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="RegWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UseControl\LogControl.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UseControl\SearchControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\BasketPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\CatalogPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\LogInPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ProfilePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\RegistrationPage.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
