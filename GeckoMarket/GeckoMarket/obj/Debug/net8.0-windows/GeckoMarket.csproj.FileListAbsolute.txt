@@ -35,8 +35,6 @@ D:\С# С++ HTML\C#\AppWPF\GeckoMarket\GeckoMarket\obj\Debug\net8.0-windows\refi
 D:\С# С++ HTML\C#\AppWPF\GeckoMarket\GeckoMarket\obj\Debug\net8.0-windows\GeckoMarket.pdb
 D:\С# С++ HTML\C#\AppWPF\GeckoMarket\GeckoMarket\obj\Debug\net8.0-windows\GeckoMarket.genruntimeconfig.cache
 D:\С# С++ HTML\C#\AppWPF\GeckoMarket\GeckoMarket\obj\Debug\net8.0-windows\ref\GeckoMarket.dll
-D:\С# С++ HTML\C#\AppWPF\GeckoMarket\GeckoMarket\obj\Debug\net8.0-windows\UseControl\LogControl.g.cs
-D:\С# С++ HTML\C#\AppWPF\GeckoMarket\GeckoMarket\obj\Debug\net8.0-windows\UseControl\LogControl.baml
 D:\С# С++ HTML\C#\AppWPF\GeckoMarket\GeckoMarket\obj\Debug\net8.0-windows\UseControl\SearchControl.g.cs
 D:\С# С++ HTML\C#\AppWPF\GeckoMarket\GeckoMarket\obj\Debug\net8.0-windows\UseControl\SearchControl.baml
 D:\С# С++ HTML\C#\AppWPF\GeckoMarket\GeckoMarket\obj\Debug\net8.0-windows\App.baml

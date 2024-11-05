@@ -23,11 +23,43 @@ namespace GeckoMarket.Views
         }
         private void Reg_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(new LogInPage());
+            if(validationData())
+            {
+                MainFrame.Navigate(new LogInPage());
+            }
         }
         private void LogIn_Click(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(new LogInPage());
+        }
+
+
+        private bool validationData()
+        {
+            string login = Login_TextBox.Text.Trim();
+            string email = Email_TextBox.Text.Trim();
+            string password = PasswordBox.Password.Trim();
+            string passwordDuplicate = PasswordBoxDuplicate.Password.Trim();
+            // Trim() - убирает пробелы из строки.
+
+            if (string.IsNullOrEmpty(login) || login.Length < 3)
+            {
+                return false;
+            }
+            else if(string.IsNullOrEmpty(email))
+            {
+                return false;
+            }
+            else if (string.IsNullOrEmpty(password) || password.Length < 3)
+            {
+                return false;
+            }
+            else if (string.IsNullOrEmpty(passwordDuplicate) || password != passwordDuplicate)
+            {
+                return false;
+            }
+
+            return true;
         }
     }
 }
