@@ -99,16 +99,6 @@
                 </Grid.RowDefinitions>
 
 
-                <!--Поиск-->
-                <Grid Width="543" HorizontalAlignment="Left" Margin="0,0,0,624" Grid.RowSpan="6">
-                    <TextBlock Margin="20 0" VerticalAlignment="Center" Foreground="#B0B9C6" IsHitTestVisible="False"
-         Panel.ZIndex="1" Text="Найти на GeckoMarket"></TextBlock>
-
-                    <TextBox Name="textBoxSearch" Style="{StaticResource searchTextbox}"/>
-                    <Icon:PackIconMaterial Kind="Magnify" Width="15" Height="15" VerticalAlignment="Center" Margin="0 0 15 0" Foreground="#B0B9C6" HorizontalAlignment="Right" />
-                </Grid>
-
-
                 <!--Заголовок-->
                 <TextBlock Text="Корзина" Grid.Row="1" FontSize="32" FontWeight="SemiBold" Margin="0 -600 0 0" Foreground="#121518" HorizontalAlignment="Left"/>
                 <!--Разделитель-->
@@ -150,7 +140,7 @@
                 </DataGrid>
             </Grid>
 
-            <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Grid.RowSpan="2"/>
+            <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Grid.ColumnSpan="2"></Frame>
         </Grid>
     </Border>
 </Page>

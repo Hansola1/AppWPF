@@ -1,37 +1,39 @@
-﻿<Window
+﻿<Window x:Class="GeckoMarket.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:UseControl="clr-namespace:GeckoMarket.UseControl" x:Class="GeckoMarket.MainWindow"
         xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
-    
-        Title="GeckoMarket"  Height="720" Width="1080" MaxHeight="720" MaxWidth="1080" 
+        Title="GeckoMarket" Height="720" Width="1080" 
+        MaxHeight="720" MaxWidth="1080" 
         WindowStartupLocation="CenterScreen"
         Background="Transparent" AllowsTransparency="True" WindowStyle="None">
 
-    <!--Боковая панель-->
-    <Border CornerRadius="10" Background="#EFF2F7" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+    <!-- Боковая панель -->
+    <Border CornerRadius="10" Background="White">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
+                <!-- Боковая панель -->
                 <ColumnDefinition Width="*"/>
+                <!-- Основная область -->
             </Grid.ColumnDefinitions>
 
-            <!--Left Menu-->
+            <!-- Левое меню -->
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <!--Меню иконки-->
+                <!-- Кнопка меню -->
                 <Button Style="{StaticResource topButton}" HorizontalAlignment="Left" Margin="20 28 0 35">
                     <Icon:PackIconMaterial Kind="Menu" Width="15" Height="15" />
                 </Button>
 
+                <!-- Логотип и меню -->
                 <Border Grid.Row="1" Background="Black" CornerRadius="0 30 0 10">
                     <DockPanel>
 
-                        <!--Меню логотип-->
+                        <!-- Логотип -->
                         <Border Width="80" Height="80" Background="White" CornerRadius="100" DockPanel.Dock="Top" HorizontalAlignment="Left" Margin="50 -20 0 0">
                             <Ellipse>
                                 <Ellipse.Fill>
@@ -40,30 +42,29 @@
                             </Ellipse>
                         </Border>
 
-
-                        <!--Меню надпись-->
+                        <!-- Надпись "Users" -->
                         <TextBlock Text="Users" Foreground="White" FontSize="22" FontWeight="SemiBold" DockPanel.Dock="Top" Margin="-25 5 0 3" TextAlignment="Center"/>
 
-                        <!--Меню палочка-->
+                        <!-- Разделитель -->
                         <Separator Margin="25" Background="White" DockPanel.Dock="Top" Height="0.9"/>
 
-                        <!--Menu кнопки-->
-                        <StackPanel DockPanel.Dock="Top" >
-                            <Button Click="ProfileButton_Click" Style="{StaticResource menuButton}" >
+                        <!-- Кнопки меню -->
+                        <StackPanel DockPanel.Dock="Top">
+                            <Button Click="ProfileButton_Click" Style="{StaticResource menuButton}">
                                 <StackPanel Orientation="Horizontal">
                                     <Icon:PackIconMaterial Kind="Account" Style="{StaticResource menuButtonIcon}"/>
                                     <TextBlock Text="Личный кабинет"/>
                                 </StackPanel>
                             </Button>
 
-                            <Button Click="CatalogButton_Click" Style="{StaticResource menuButton}"  >
+                            <Button Click="CatalogButton_Click" Style="{StaticResource menuButton}">
                                 <StackPanel Orientation="Horizontal">
                                     <Icon:PackIconMaterial Kind="folder" Style="{StaticResource menuButtonIcon}"/>
                                     <TextBlock Text="Каталог"/>
                                 </StackPanel>
                             </Button>
 
-                            <Button Click="BasketButton_Click" Style="{StaticResource menuButton}" Foreground="White">
+                            <Button Click="BasketButton_Click" Style="{StaticResource menuButton}">
                                 <StackPanel Orientation="Horizontal">
                                     <Icon:PackIconMaterial Kind="basket" Style="{StaticResource menuButtonIcon}"/>
                                     <TextBlock Text="Корзина"/>
@@ -71,6 +72,7 @@
                             </Button>
                         </StackPanel>
 
+                        <!-- Кнопка "Выйти" -->
                         <Button Style="{StaticResource menuButton}" VerticalAlignment="Bottom" DockPanel.Dock="Bottom" Margin="15 0 15 20">
                             <StackPanel Orientation="Horizontal">
                                 <Icon:PackIconMaterial Kind="Logout" Style="{StaticResource menuButtonIcon}"/>
@@ -84,10 +86,11 @@
 
             <Grid Grid.Column="1">
                 <!--Заголовок-->
-                <TextBlock Text="Добро пожаловать в GeckoMarket!" FontSize="36" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="69,28,0,0"/>
+                <TextBlock Text="Добро пожаловать на GeckoMarket!" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="150,-100,0,0"/>
             </Grid>
-            
-            <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Grid.Column="2" Visibility="Visible"/>
+
+            <!-- Основная область, где будет загружаться страница -->
+            <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Grid.ColumnSpan="2"/>
         </Grid>
     </Border>
 </Window>

@@ -15,14 +15,19 @@ using System.Windows.Shapes;
 
 namespace GeckoMarket.Views
 {
-    /// <summary>
-    /// Логика взаимодействия для LogInPage.xaml
-    /// </summary>
     public partial class LogInPage : Page
     {
         public LogInPage()
         {
             InitializeComponent();
+        }
+        private void Reg_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new RegistrationPage());
+        }
+        private void LogIn_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new CatalogPage());
         }
     }
 }
