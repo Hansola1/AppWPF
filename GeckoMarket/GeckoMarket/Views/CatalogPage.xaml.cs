@@ -13,6 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using GeckoMarket.DataBase;
+
+
 namespace GeckoMarket.Views
 {
     public partial class CatalogPage : Page
@@ -21,11 +24,12 @@ namespace GeckoMarket.Views
         {
             InitializeComponent();
 
+            DBControll db = new DBControll();
+            db.SetCatalog();
 
-            List<Animals> animal = new List<Animals>();
+            /*List<Animals> animal = new List<Animals>();
             animal.Add(new Animals { Number = 1, Type = "Eublefar", Morph = "Normal het TA", Sex = "Male", Cost = "1000$" });
-
-            Catalog_DataGrid.ItemsSource = animal;
+            Catalog_DataGrid.ItemsSource = animal;*/
         }
         private void ProfileButton_Click(object sender, RoutedEventArgs e)
         {
@@ -41,12 +45,12 @@ namespace GeckoMarket.Views
         }
     }
 
-    public class Animals //БД
+    /*public class Animals //БД
     {
         public int Number { get; set; }
         public string Type { get; set; }
         public string Morph { get; set; }
         public string Sex { get; set; }
         public string Cost { get; set; }
-    }
+    }*/
 }

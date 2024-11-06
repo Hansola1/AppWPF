@@ -14,7 +14,8 @@ namespace GeckoMarket
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new RegistrationPage()); //страница, которую открываем по умолчанию
+            //MainFrame.Navigate(new RegistrationPage()); //страница, которую открываем по умолчанию 
+            MainFrame.Navigate(new CatalogPage());
         }
         private void ProfileButton_Click(object sender, RoutedEventArgs e)
         {
@@ -28,7 +29,6 @@ namespace GeckoMarket
         {
             MainFrame.Navigate(new BasketPage());
         }
-
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {

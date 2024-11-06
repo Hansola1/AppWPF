@@ -1,0 +1,36 @@
+Структура таблиц:
+
+   UNIQUE - уникальное значение
+
+1. Таблица 1: Пользователи (Users)
+   - UserID (int, PRIMARY KEY, AUTO_INCREMENT)
+   - Login (varchar, UNIQUE)
+   - Password (varchar)
+   - Email (varchar, UNIQUE)
+
+2. Таблица 2: Каталог (Catalog)
+   - CatalogID (int, PRIMARY KEY, AUTO_INCREMENT)
+   - TypeReptile (varchar)
+   - MorphReptile (varchar)
+   - SexReptile (varchar)
+   - CostReptile (decimal) 
+
+3. Таблица 3: Корзина (Basket)
+   - BasketID (int, PRIMARY KEY, AUTO_INCREMENT)
+   - UserID (int, FOREIGN KEY -> Users.UserID)
+   - CatalogID (int, FOREIGN KEY -> Catalog.CatalogID)
+   - Quantity (int) // количество товара в корзине
+
+4. Таблица 4: Заказы (Orders)
+   - OrderID (int, PRIMARY KEY, AUTO_INCREMENT)
+   - UserID (int, FOREIGN KEY -> Users.UserID)
+   - TotalCost (decimal) // общая сумма заказа
+
+Основные операции с БД:
+
+1. Добавление записей:
+   - Пользователи могут создавать аккаунты, тем самым записывая новые данные в таблицу Users.
+   - При добавлении товара в корзину пользователи добавляют записи в таблицу Basket.
+
+2. Удаление записей:
+   - При покупке животного вы можете удалять запись из таблицы Basket
