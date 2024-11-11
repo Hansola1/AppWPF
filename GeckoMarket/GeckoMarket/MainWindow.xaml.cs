@@ -14,7 +14,7 @@ namespace GeckoMarket
         public MainWindow()
         {
             InitializeComponent();
-            //MainFrame.Navigate(new RegistrationPage()); //страница, которую открываем по умолчанию 
+            //MainFrame.Navigate(new RegistrationPage()); 
             MainFrame.Navigate(new CatalogPage());
         }
         private void ProfileButton_Click(object sender, RoutedEventArgs e)

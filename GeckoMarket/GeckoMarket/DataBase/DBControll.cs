@@ -16,7 +16,8 @@ namespace GeckoMarket.DataBase
     public class DBControll 
     {
         //private static string connectionString = ConfigurationManager.ConnectionStrings["GeckoMarketDB"].ConnectionString; 
-        private static string connectionString = "host=localhost port=5432 dbname=GeckoMarket user=postgres password=root";
+        private static string connectionString = "Host=localhost;Port=5432;Database=GeckoMarket;User Id=postgres;Password=tyktyk;";
+
         NpgsqlConnection sqlConnection = new NpgsqlConnection(connectionString);
 
         private void Connection() 
@@ -35,8 +36,8 @@ namespace GeckoMarket.DataBase
 
         public void SetCatalog()
         {
-            //Connection();
-            sqlConnection.Open();
+            Connection();
+            //sqlConnection.Open();
 
             NpgsqlCommand command = new NpgsqlCommand(); 
             command.Connection = sqlConnection;
