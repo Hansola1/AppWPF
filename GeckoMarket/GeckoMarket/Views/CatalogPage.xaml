@@ -139,11 +139,11 @@
                             </DataGridCheckBoxColumn.HeaderTemplate>
                         </DataGridCheckBoxColumn>
 
-                        <DataGridTextColumn Header="№" IsReadOnly="True" CanUserResize="False" Width="auto" Binding="{Binding Number}"/>
-                        <DataGridTextColumn Header="Вид" Binding="{Binding Type}" IsReadOnly="True" Width="200"/>
-                        <DataGridTextColumn Header="Морфа" Binding="{Binding Morph}" IsReadOnly="True" Width="360"/>
-                        <DataGridTextColumn Header="Пол" Binding="{Binding Sex}" IsReadOnly="True" Width="60"/>
-                        <DataGridTextColumn Header="Цена" Binding="{Binding Cost}" IsReadOnly="True" Width="90"/>
+                        <DataGridTextColumn Header="№" IsReadOnly="True" CanUserResize="False" Width="auto" Binding="{Binding CatalogID}"/>
+                        <DataGridTextColumn Header="Вид" Binding="{Binding TypeReptile}" IsReadOnly="True" Width="190"/>
+                        <DataGridTextColumn Header="Пол" Binding="{Binding SexReptile}" IsReadOnly="True" Width="100"/>
+                        <DataGridTextColumn Header="Морфа" Binding="{Binding MorphReptile}" IsReadOnly="True" Width="365"/>
+                        <DataGridTextColumn Header="Цена" Binding="{Binding CostReptile}" IsReadOnly="True" Width="90"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </Grid>

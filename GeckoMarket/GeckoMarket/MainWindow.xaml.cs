@@ -14,8 +14,7 @@ namespace GeckoMarket
         public MainWindow()
         {
             InitializeComponent();
-            //MainFrame.Navigate(new RegistrationPage()); 
-            MainFrame.Navigate(new CatalogPage());
+            MainFrame.Navigate(new RegistrationPage()); 
         }
         private void ProfileButton_Click(object sender, RoutedEventArgs e)
         {

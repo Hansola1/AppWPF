@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GeckoMarket.DataBase;
+using System;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -26,6 +27,8 @@ namespace GeckoMarket.Views
 
         private bool validationData()
         {
+            DBControll db = new DBControll();
+
             string login = Login_TextBox.Text.Trim();
             string password = PasswordBox.Password.Trim();
             // Trim() - убирает пробелы из строки.
@@ -40,6 +43,12 @@ namespace GeckoMarket.Views
                 PasswordBox.ToolTip = "Заполните поле!";
                 return false; 
             }
+            else if(db.dateVerification(Login_TextBox.Text, PasswordBox.Password) == false)
+            {
+                MessageBox.Show("Неверные данные");
+                return false;
+            }
+
             return true;
         }
     }

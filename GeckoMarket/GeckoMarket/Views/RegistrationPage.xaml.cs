@@ -1,5 +1,7 @@
-﻿using System;
+﻿using GeckoMarket.DataBase;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +27,7 @@ namespace GeckoMarket.Views
         {
             if(validationData())
             {
+                CreatUser();
                 MainFrame.Navigate(new LogInPage());
             }
         }
@@ -33,9 +36,10 @@ namespace GeckoMarket.Views
             MainFrame.Navigate(new LogInPage());
         }
 
-
         private bool validationData()
         {
+            DBControll db = new DBControll();
+
             string login = Login_TextBox.Text.Trim();
             string email = Email_TextBox.Text.Trim();
             string password = PasswordBox.Password.Trim();
@@ -58,8 +62,18 @@ namespace GeckoMarket.Views
             {
                 return false;
             }
-
+            else if (db.UserExists(Login_TextBox.Text) == true)
+            {
+                MessageBox.Show("Такой аккаунт существует");
+                return false;
+            }
             return true;
+        }
+
+        private void CreatUser()
+        {
+            DBControll db = new DBControll();
+            db.AddUsers(Login_TextBox.Text, PasswordBox.Password, Email_TextBox.Text);       
         }
     }
 }
