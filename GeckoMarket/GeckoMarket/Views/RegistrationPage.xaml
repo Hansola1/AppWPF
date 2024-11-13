@@ -26,6 +26,11 @@
                 <!-- Поля ввода данных -->
                 <StackPanel Margin="0,105,0,140" HorizontalAlignment="Center" Width="400">
                     <!-- Поле ввода Логин -->
+                    <TextBlock Text="Имя:" FontSize="20" Margin="0,10,0,5"/>
+                    <Border CornerRadius="10" BorderBrush="#FFA7A7A7" Background="Transparent" BorderThickness="1">
+                        <TextBox x:Name="Name_TextBox" Width="399" Height="40" FontSize="20" Background="Transparent" BorderThickness="0"/>
+                    </Border>
+                    
                     <TextBlock Text="Логин:" FontSize="20" Margin="0,10,0,5"/>
                     <Border CornerRadius="10" BorderBrush="#FFA7A7A7" Background="Transparent" BorderThickness="1">
                         <TextBox x:Name="Login_TextBox" Width="399" Height="40" FontSize="20" Background="Transparent" BorderThickness="0"/>
@@ -52,15 +57,16 @@
                 </StackPanel>
 
                 <!-- Кнопка "Зарегистрироваться" -->
-                <Border CornerRadius="10" Background="Black" Width="400" Margin="315,459,315,149">
+                <Border CornerRadius="10" Background="Black" Width="400" Margin="315,529,315,82">
                     <Button Content="Зарегистрироваться" Width="400" Height="70" FontSize="25" FontWeight="Bold"  Background="Transparent" Foreground="White" Click="Reg_Click"/>
                 </Border>
-                <TextBlock Text="У вас уже есть аккаунт?" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="318,549,0,104" TextAlignment="Center" Foreground="#FF8F8F8F"/>
-                <Button Content="Войти" FontSize="20" FontWeight="Bold"  Background="Transparent" Foreground="Black" Margin="552,549,0,104" HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5" BorderBrush="{x:Null}" Width="68" Click="LogIn_Click">
+                <TextBlock Text="У вас уже есть аккаунт?" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="318,603,0,31" TextAlignment="Center" Foreground="#FF8F8F8F"/>
+                <Button Content="Войти" FontSize="20" FontWeight="Bold"  Background="Transparent" Foreground="Black" Margin="552,598,0,41" HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5" BorderBrush="{x:Null}" Width="68" Click="LogIn_Click">
                 </Button>
 
             </Grid>
             <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Grid.ColumnSpan="1"/>
         </Grid>
     </Border>
-    </Page>
+</Page>
+ 

@@ -99,8 +99,18 @@
 
             <Grid Grid.Column="1">
                 <!--Заголовок-->
-                <TextBlock Text="Логин:" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="237,178,0,0"/>
-                <TextBlock Text="Пароль:" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="237,218,0,0"/>
+                <TextBlock Text="Ваш аккаунт" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="230,60,0,0"/>
+
+                <TextBlock Text="Имя:" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="230,138,0,0"/>
+                <TextBlock Text="Логин:" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="230,188,0,0"/>
+                <TextBlock Text="Почта:" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="230,238,0,0"/>
+                <TextBlock Text="Пароль:" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="230,288,0,0"/>
+
+
+                <TextBox x:Name="Name_TextBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Height="30" Margin="360,140,0,0"/>
+                <TextBox x:Name="Login_TextBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Height="30" Margin="360,190,0,0"/>
+                <TextBox x:Name="Email_TextBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Height="30" Margin="360,240,0,0"/>
+                <TextBox x:Name="Password_TextBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Height="30" Margin="360,295,0,0"/>
             </Grid>
 
             <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Grid.ColumnSpan="2"/>

@@ -21,11 +21,14 @@ namespace GeckoMarket.Views
         {
             if (validationData())
             {
+                UserSession.IsLoggedIn = true;
+                UserSession.CurrentUserLogin = Login_TextBox.Text.Trim();
+
                 MainFrame.Navigate(new CatalogPage());
             }
         }
 
-        private bool validationData()
+        public bool validationData()
         {
             DBControll db = new DBControll();
 

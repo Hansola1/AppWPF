@@ -36,7 +36,7 @@ namespace GeckoMarket.DataBase
             NpgsqlCommand command = new NpgsqlCommand("SELECT * FROM public.\"Catalog\"", sqlConnection);
             NpgsqlDataReader dataReader = command.ExecuteReader();
 
-            while (dataReader.Read())
+            while (dataReader.Read()) // Проверяем, есть ли данные
             {
                 CatalogData catalogData = new CatalogData(dataReader["CatalogID"].ToString(), dataReader["TypeReptile"].ToString(),
                     dataReader["SexReptile"].ToString(), dataReader["MorphReptile"].ToString(),Convert.ToInt32(dataReader["CostReptile"])
@@ -48,7 +48,7 @@ namespace GeckoMarket.DataBase
             return catalogDataList;
         }
 
-        public void AddUsers(string login, string password, string email)
+        public void AddUsers(string nickname, string login, string password, string email)
         {
             Connection();
 
@@ -57,7 +57,8 @@ namespace GeckoMarket.DataBase
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = sqlConnection;
 
-            command.CommandText = "INSERT INTO public.\"Users\" (\"login\", \"password\", \"email\") VALUES (@login, @password, @email)";
+            command.CommandText = "INSERT INTO public.\"Users\" (\"nickname\", \"login\", \"password\", \"email\") VALUES (@nickname, @login, @password, @email)";
+            command.Parameters.AddWithValue("@nickname", nickname); //берем значени из бд и в строку :)
             command.Parameters.AddWithValue("@login", login);
             command.Parameters.AddWithValue("@password", password);
             command.Parameters.AddWithValue("@email", email);
@@ -90,7 +91,7 @@ namespace GeckoMarket.DataBase
             }
         }
 
-        public bool dateVerification(string login, string password)
+        public bool dateVerification(string login, string password) //отметить здесь что я вошла в аккаунта
         {
             Connection();
 
@@ -112,6 +113,34 @@ namespace GeckoMarket.DataBase
             {
                 sqlConnection.Close();
             }
+        }
+
+        public UsersData GetUserData(string login)
+        {
+            Connection();
+
+            UsersData userData = null;
+
+            NpgsqlCommand command = new NpgsqlCommand();
+            command.Connection = sqlConnection;
+
+            command.CommandText = "SELECT \"nickname\", \"password\", \"email\" FROM public.\"Users\" WHERE \"login\" = @login";
+            command.Parameters.AddWithValue("@login", login);
+
+            NpgsqlDataReader reader = command.ExecuteReader();
+
+            if (reader.Read())
+            {
+                userData = new UsersData()
+                {
+                    nickname = reader["nickname"].ToString(),
+                    password = reader["password"].ToString(),
+                    email = reader["email"].ToString(),
+                };
+            }
+
+            sqlConnection.Close();
+            return userData;
         }
     }
 }

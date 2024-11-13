@@ -40,6 +40,7 @@ namespace GeckoMarket.Views
         {
             DBControll db = new DBControll();
 
+            string nickname = Name_TextBox.Text.Trim();
             string login = Login_TextBox.Text.Trim();
             string email = Email_TextBox.Text.Trim();
             string password = PasswordBox.Password.Trim();
@@ -73,7 +74,7 @@ namespace GeckoMarket.Views
         private void CreatUser()
         {
             DBControll db = new DBControll();
-            db.AddUsers(Login_TextBox.Text, PasswordBox.Password, Email_TextBox.Text);       
+            db.AddUsers(Name_TextBox.Text, Login_TextBox.Text, PasswordBox.Password, Email_TextBox.Text);       
         }
     }
 }
