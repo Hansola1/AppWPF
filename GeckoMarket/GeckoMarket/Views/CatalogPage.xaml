@@ -10,7 +10,7 @@
       Title="CatalogPage" Height="720" Width="1080" MaxHeight="720" MaxWidth="1080" Background="Transparent" >
 
     <!--Боковая панель-->
-    <Border CornerRadius="10" Background="#EFF2F7">
+    <Border CornerRadius="10" Background="#f0f0f2">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
@@ -99,11 +99,11 @@
 
                 <!--Поиск-->
                 <Grid Width="543" HorizontalAlignment="Left" Margin="0,0,0,624" Grid.RowSpan="6">
-                    <TextBlock Margin="20 0" VerticalAlignment="Center" Foreground="#B0B9C6" IsHitTestVisible="False"
+                    <TextBlock Margin="20 0" VerticalAlignment="Center" Foreground="#FF595959" IsHitTestVisible="False"
              Panel.ZIndex="1" Text="Найти на GeckoMarket"></TextBlock>
 
-                    <TextBox Name="textBoxSearch" Style="{StaticResource searchTextbox}"/>
-                    <Icon:PackIconMaterial Kind="Magnify" Width="15" Height="15" VerticalAlignment="Center" Margin="0 0 15 0" Foreground="#B0B9C6" HorizontalAlignment="Right" />
+                    <TextBox Name="textBoxSearch" Style="{StaticResource searchTextbox}" BorderBrush="White" Foreground="#FF595959" SelectionBrush="#FF595959" SelectionTextBrush="White"/>
+                    <Icon:PackIconMaterial Kind="Magnify" Width="15" Height="15" VerticalAlignment="Center" Margin="0 0 15 0" Foreground="#FF595959" HorizontalAlignment="Right" />
                 </Grid>
 
 
@@ -113,7 +113,7 @@
                 <Separator Height="5" Grid.Row="3" Background="#DAE2EA" Margin="0 -1090 0 10"/>
 
                 <!--Листать страницы-->
-                <Border  HorizontalAlignment="Right" BorderBrush="#DEE4EC" BorderThickness="1" CornerRadius="5"  Background="#ffffff" Margin="0 650 10 0">
+                <Border  HorizontalAlignment="Right" BorderBrush="#DEE4EC" BorderThickness="1" CornerRadius="5"  Background="#ffffff" Margin="0 650 0 0">
                     <StackPanel Orientation="Horizontal">
                         <Button Style="{StaticResource pagingButton}">
                             <Icon:PackIconMaterial Kind="ChevronLeft" Style="{StaticResource pagingButtonIcon}"/>
@@ -129,9 +129,9 @@
 
                 <!--Таблица-->
                 <DataGrid x:Name="Catalog_DataGrid"  AutoGenerateColumns="False" ItemsSource="{Binding YourDataCollection}" Margin="0,140,0,28"
-                       RowStyle="{DynamicResource DataGridRowStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}">
+                       RowStyle="{DynamicResource DataGridRowStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}" Background="White" BorderBrush="#FFDEE4EC">
                     <DataGrid.Columns>
-                        <DataGridCheckBoxColumn Header="C" CanUserResize="False" Width="auto" ElementStyle="{StaticResource CheckBoxStyle1}">
+                        <DataGridCheckBoxColumn x:Name="ProductCheckBox" Header="C" CanUserResize="False" Width="auto" ElementStyle="{StaticResource CheckBoxStyle1}">
                             <DataGridCheckBoxColumn.HeaderTemplate>
                                 <DataTemplate>
                                     <CheckBox Style="{StaticResource CheckBoxStyle1}"/>
@@ -148,6 +148,8 @@
                 </DataGrid>
             </Grid>
 
+            <Button Click="AddInBasket_Click" Style="{StaticResource pagingButton}" Grid.Column="1" Content="Добавить в корзину" HorizontalAlignment="Left" Margin="30,671,0,0" VerticalAlignment="Top" Width="150" Height="29" Background="White" BorderBrush="White" FontSize="12" Foreground="#FF595959">
+            </Button>
             <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Grid.ColumnSpan="2"></Frame>
         </Grid>
     </Border>

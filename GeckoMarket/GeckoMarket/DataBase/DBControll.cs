@@ -38,9 +38,10 @@ namespace GeckoMarket.DataBase
 
             while (dataReader.Read()) // Проверяем, есть ли данные
             {
-                CatalogData catalogData = new CatalogData(dataReader["CatalogID"].ToString(), dataReader["TypeReptile"].ToString(),
+                CatalogData catalogData = new CatalogData(Convert.ToInt32(dataReader["CatalogID"]), dataReader["TypeReptile"].ToString(),
                     dataReader["SexReptile"].ToString(), dataReader["MorphReptile"].ToString(),Convert.ToInt32(dataReader["CostReptile"])
                 );
+                // каталог айди на самом деле айди товара, переименовать надо
                 catalogDataList.Add(catalogData);
             }    
             sqlConnection.Close(); 

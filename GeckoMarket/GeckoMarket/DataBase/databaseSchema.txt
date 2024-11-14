@@ -21,10 +21,6 @@
    - CatalogID (int, FOREIGN KEY -> Catalog.CatalogID)
    - Quantity (int) // количество товара в корзине
 
-4. Таблица 4: Заказы (Orders)
-   - OrderID (int, PRIMARY KEY, AUTO_INCREMENT)
-   - UserID (int, FOREIGN KEY -> Users.UserID)
-   - TotalCost (decimal) // общая сумма заказа
 
 Основные операции с БД:
 

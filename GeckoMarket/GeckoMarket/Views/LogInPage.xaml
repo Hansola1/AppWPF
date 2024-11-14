@@ -9,7 +9,6 @@
       d:DesignHeight="720" d:DesignWidth="1080"
       Title="RegistrationPage" Height="720" Width="1080" MaxHeight="720" MaxWidth="1080" Background="Transparent">
 
-    <!-- Боковая панель -->
     <Border CornerRadius="10" Background="White">
         <Grid>
             <Grid.ColumnDefinitions>
@@ -39,7 +38,7 @@
 
                 <!-- Кнопка "Войти" -->
                 <Border CornerRadius="10" Background="Black" Width="400" Margin="315,459,315,149">
-                    <Button x:Name="Login_Button" Content="Войти" Width="400" Height="70" FontSize="25" FontWeight="Bold"  Background="Transparent" Foreground="White" Click="LogIn_Click"/>
+                    <Button x:Name="Login_Button" Content="Войти" Width="400" Height="70" FontSize="25" FontWeight="Bold"  Background="Transparent" Foreground="White" BorderBrush="Transparent" Click="LogIn_Click"/>
                 </Border>
                 <TextBlock Text="У вас нет аккаунта?" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="318,549,0,104" TextAlignment="Center" Foreground="#FF8F8F8F"/>
                 <Button Content="Создать" FontSize="18" FontWeight="Bold"  Background="Transparent" Foreground="Black" Margin="515,549,0,104" HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5" BorderBrush="{x:Null}" Width="84" Click="CreatAccount_Click">

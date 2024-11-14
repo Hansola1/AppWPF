@@ -36,5 +36,20 @@ namespace GeckoMarket.Views
                 Catalog_DataGrid.ItemsSource = catalogDatas;
             });
         }
+
+        private void AddInBasket_Click(object sender, RoutedEventArgs e)
+        {
+            BasketPage basketPage = new BasketPage();
+
+            if (UserSession.Visitor == true)
+            {
+                MessageBox.Show("Создайте аккаунт!!!");
+                MainFrame.Navigate(new RegistrationPage());
+            }
+            else
+            {
+                
+            }
+        }
     }
 }

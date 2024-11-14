@@ -35,6 +35,12 @@ namespace GeckoMarket.Views
         {
             MainFrame.Navigate(new LogInPage());
         }
+        private void visitor_Click(object sender, RoutedEventArgs e)
+        {
+            UserSession.Visitor = true;
+            MainFrame.Navigate(new CatalogPage());
+        }
+
 
         private bool validationData()
         {

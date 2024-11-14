@@ -12,7 +12,7 @@
  
 
     <!--Боковая панель-->
-    <Border CornerRadius="10" Background="#EFF2F7">
+    <Border CornerRadius="10" Background="#f0f0f2">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
@@ -105,7 +105,7 @@
                 <Separator Height="5" Grid.Row="3" Background="#DAE2EA" Margin="0 -1090 0 10"/>
 
                 <!--Листать страницы-->
-                <Border  HorizontalAlignment="Right" BorderBrush="#DEE4EC" BorderThickness="1" CornerRadius="5"  Background="#ffffff" Margin="0 650 10 0">
+                <Border  HorizontalAlignment="Right" BorderBrush="#DEE4EC" BorderThickness="1" CornerRadius="5"  Background="#ffffff" Margin="0 650 0 0">
                     <StackPanel Orientation="Horizontal">
                         <Button Style="{StaticResource pagingButton}">
                             <Icon:PackIconMaterial Kind="ChevronLeft" Style="{StaticResource pagingButtonIcon}"/>
@@ -120,8 +120,8 @@
                 </Border>
 
                 <!--Таблица-->
-                <DataGrid x:Name="Catalog_DataGrid"  AutoGenerateColumns="False" ItemsSource="{Binding YourDataCollection}" Margin="0,140,0,28"
-                   RowStyle="{DynamicResource DataGridRowStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}">
+                <DataGrid x:Name="Basket_DataGrid"  AutoGenerateColumns="False" ItemsSource="{Binding YourDataCollection}" Margin="0,140,0,28"
+                   RowStyle="{DynamicResource DataGridRowStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}" Background="White" BorderBrush="#FFDEE4EC">
                     <DataGrid.Columns>
                         <DataGridCheckBoxColumn Header="C" CanUserResize="False" Width="auto" ElementStyle="{StaticResource CheckBoxStyle1}">
                             <DataGridCheckBoxColumn.HeaderTemplate>
@@ -131,15 +131,17 @@
                             </DataGridCheckBoxColumn.HeaderTemplate>
                         </DataGridCheckBoxColumn>
 
-                        <DataGridTextColumn Header="№" IsReadOnly="True" CanUserResize="False" Width="auto" Binding="{Binding Number}"/>
-                        <DataGridTextColumn Header="Вид" Binding="{Binding Type}" IsReadOnly="True" Width="200"/>
-                        <DataGridTextColumn Header="Морфа" Binding="{Binding Morph}" IsReadOnly="True" Width="360"/>
-                        <DataGridTextColumn Header="Пол" Binding="{Binding Sex}" IsReadOnly="True" Width="60"/>
-                        <DataGridTextColumn Header="Цена" Binding="{Binding Cost}" IsReadOnly="True" Width="90"/>
+                        <DataGridTextColumn Header="№" IsReadOnly="True" CanUserResize="False" Width="auto" Binding="{Binding CatalogID}"/>
+                        <DataGridTextColumn Header="Вид" Binding="{Binding TypeReptile}" IsReadOnly="True" Width="190"/>
+                        <DataGridTextColumn Header="Пол" Binding="{Binding SexReptile}" IsReadOnly="True" Width="100"/>
+                        <DataGridTextColumn Header="Морфа" Binding="{Binding MorphReptile}" IsReadOnly="True" Width="365"/>
+                        <DataGridTextColumn Header="Цена" Binding="{Binding CostReptile}" IsReadOnly="True" Width="90"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </Grid>
 
+            <Button x:Name="CreatOrder_Button" Click="CreatOrder_Click" Style="{StaticResource pagingButton}" Grid.Column="1" Content="Оформить заказ" HorizontalAlignment="Left" Margin="30,671,0,0" VerticalAlignment="Top" Width="150" Height="29" Background="White" BorderBrush="White" FontSize="12" Foreground="#FF595959">
+            </Button>
             <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Grid.ColumnSpan="2"></Frame>
         </Grid>
     </Border>

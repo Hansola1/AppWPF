@@ -11,6 +11,7 @@
   <ItemGroup>
     <None Remove="10871573-kormovye-nasekomye-500x500.jpg" />
     <None Remove="Images\avatar.png" />
+    <None Remove="Images\erick-aboutme.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,6 +31,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\avatar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\erick-aboutme.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

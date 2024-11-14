@@ -11,7 +11,7 @@
       Background="Transparent">
 
     <!--Боковая панель-->
-    <Border CornerRadius="10" Background="#EFF2F7">
+    <Border CornerRadius="10" Background="#f0f0f2">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
