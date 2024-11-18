@@ -59,7 +59,7 @@ namespace GeckoMarket.DataBase
             command.Connection = sqlConnection;
 
             command.CommandText = "INSERT INTO public.\"Users\" (\"nickname\", \"login\", \"password\", \"email\") VALUES (@nickname, @login, @password, @email)";
-            command.Parameters.AddWithValue("@nickname", nickname); //берем значени из бд и в строку :)
+            command.Parameters.AddWithValue("@nickname", nickname); //берем значениe из бд и в строку :)
             command.Parameters.AddWithValue("@login", login);
             command.Parameters.AddWithValue("@password", password);
             command.Parameters.AddWithValue("@email", email);
@@ -142,6 +142,53 @@ namespace GeckoMarket.DataBase
 
             sqlConnection.Close();
             return userData;
+        }
+
+        public void DeleteUsers(int? UserID)
+        {
+            Connection();
+
+            NpgsqlCommand command = new NpgsqlCommand();
+            command.Connection = sqlConnection;
+
+            command.CommandText = "DELETE FROM public.\"Users\" WHERE \"UserID\" = @UserID";
+            command.Parameters.AddWithValue("@UserID", UserID); 
+            command.ExecuteNonQuery(); 
+
+            sqlConnection.Close();
+        }
+
+        public int? GetCurrentUserID(string login)
+        {
+            Connection();
+
+            try
+            {
+                using (NpgsqlCommand command = new NpgsqlCommand()) 
+                {
+                    command.Connection = sqlConnection;
+                    command.CommandText = "SELECT \"UserID\" FROM public.\"Users\" WHERE \"login\" = @login";
+                    command.Parameters.AddWithValue("@login", login);
+
+                    using (NpgsqlDataReader dataReader = command.ExecuteReader())
+                    {
+                        if (dataReader.Read())
+                        {
+                            return dataReader.GetInt32(0);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при получении UserID: {ex.Message}");
+            }
+            finally
+            {
+                sqlConnection.Close();
+            }
+
+            return null;
         }
     }
 }

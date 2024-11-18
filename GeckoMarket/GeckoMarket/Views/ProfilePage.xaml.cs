@@ -23,6 +23,30 @@ namespace GeckoMarket.Views
         {
             MainFrame.Navigate(new BasketPage());
         }
+        private void DeleteAccount_Click(object sender, RoutedEventArgs e)
+        {
+            DBControll db = new DBControll();
+
+            if (UserSession.IsLoggedIn)
+            {
+                string loginCurrentUser = UserSession.CurrentUserLogin;
+                int? UserIDtoDelete = db.GetCurrentUserID(loginCurrentUser);
+
+                if (UserIDtoDelete.HasValue) // если оно не null
+                {
+                    db.DeleteUsers(UserIDtoDelete.Value);
+                    MainFrame.Navigate(new RegistrationPage());
+                }
+                else
+                {
+                    MessageBox.Show("Пользователь не найден.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Сначала создайте аккаунта ;)");
+            }
+        }
 
         private void LoadInformationUser()
         {
@@ -41,6 +65,12 @@ namespace GeckoMarket.Views
                     Email_TextBox.Text = userData.email;
                 }
             }
+        }
+
+        private void Out_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.CloseProgramm();
         }
     }
 }

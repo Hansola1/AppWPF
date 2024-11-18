@@ -103,3 +103,6 @@ D:\С# С++ HTML\C#\AppWPF\GeckoMarket\GeckoMarket\bin\Debug\net8.0-windows\runt
 D:\С# С++ HTML\C#\AppWPF\GeckoMarket\GeckoMarket\bin\Debug\net8.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 D:\С# С++ HTML\C#\AppWPF\GeckoMarket\GeckoMarket\bin\Debug\net8.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 D:\С# С++ HTML\C#\AppWPF\GeckoMarket\GeckoMarket\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Runtime.Caching.dll
+D:\С# С++ HTML\C#\AppWPF\GeckoMarket\GeckoMarket\bin\Debug\net8.0-windows\SixLabors.Fonts.dll
+D:\С# С++ HTML\C#\AppWPF\GeckoMarket\GeckoMarket\bin\Debug\net8.0-windows\SixLabors.ImageSharp.dll
+D:\С# С++ HTML\C#\AppWPF\GeckoMarket\GeckoMarket\bin\Debug\net8.0-windows\SixLabors.ImageSharp.Drawing.dll

@@ -57,5 +57,10 @@ namespace GeckoMarket
                 }
             }
         }
+
+        public void CloseProgramm()
+        {
+            Application.Current.Shutdown(); //mainWindow.Close(); не понимаю почему не работает?
+        }
     }
 }

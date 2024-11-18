@@ -51,5 +51,11 @@ namespace GeckoMarket.Views
                 
             }
         }
+
+        private void Out_ButtonClick(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.CloseProgramm();
+        }
     }
 }

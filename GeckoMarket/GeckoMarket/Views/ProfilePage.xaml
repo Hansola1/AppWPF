@@ -74,7 +74,7 @@
                             </Button>
                         </StackPanel>
 
-                        <Button Style="{StaticResource menuButton}" VerticalAlignment="Bottom" DockPanel.Dock="Bottom" Margin="15 0 15 20">
+                        <Button Click="Out_Click" Style="{StaticResource menuButton}" VerticalAlignment="Bottom" DockPanel.Dock="Bottom" Margin="15 0 15 20">
                             <StackPanel Orientation="Horizontal">
                                 <Icon:PackIconMaterial Kind="Logout" Style="{StaticResource menuButtonIcon}"/>
                                 <TextBlock Text="Выйти"/>
@@ -97,20 +97,31 @@
                 </Grid.RowDefinitions>
             </Grid>
 
-            <Grid Grid.Column="1">
+            <Grid Grid.Column="1" Margin="0,110,0,99">
+                <Border CornerRadius="30" Background="White" Margin="29,-16,32,-65">
+                    <Border.Effect>
+                        <DropShadowEffect BlurRadius="30" Color="#f1f1f3" ShadowDepth="0"></DropShadowEffect>
+                    </Border.Effect>
+                </Border>
+
                 <!--Заголовок-->
-                <TextBlock Text="Ваш аккаунт" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="230,60,0,0"/>
+                <TextBlock Text="Ваш аккаунт" FontSize="35" FontWeight="SemiBold"  Foreground="#121518" HorizontalAlignment="Center" Width="722" Margin="0,10,0,0"/>
 
-                <TextBlock Text="Имя:" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="230,138,0,0"/>
-                <TextBlock Text="Логин:" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="230,188,0,0"/>
-                <TextBlock Text="Почта:" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="230,238,0,0"/>
-                <TextBlock Text="Пароль:" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="230,288,0,0"/>
+                <TextBlock Text="Имя:" FontSize="25"  Margin="0,130,0,341" Foreground="#121518" HorizontalAlignment="Center" Width="536"/>
+                <TextBlock Text="Логин:" FontSize="25" Margin="168,200,0,262" Foreground="#121518" HorizontalAlignment="Left" Width="150"/>
+                <TextBlock Text="Почта:" FontSize="25"  Margin="168,270,0,0" Foreground="#121518" HorizontalAlignment="Left" Width="150"/>
+                <TextBlock Text="Пароль:" FontSize="25"  Margin="168,340,0,0" Foreground="#121518" HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5" Width="120">
+                </TextBlock>
 
+                <Border CornerRadius="15" Background="Black" Margin="228,441,330,10">
+                    <Button Height="NaN" x:Name="Login_Button" FontSize="25" FontWeight="Bold"  Background="Transparent" Foreground="Black" BorderBrush="Transparent" Click="DeleteAccount_Click" Margin="0,-11,0,-9"/>
+                </Border>
+                <TextBlock Text="Удалить аккаунт" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="172,458,0,-3" TextAlignment="Center" Foreground="White" Width="433"/>
 
-                <TextBox x:Name="Name_TextBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Height="30" Margin="360,140,0,0"/>
-                <TextBox x:Name="Login_TextBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Height="30" Margin="360,190,0,0"/>
-                <TextBox x:Name="Email_TextBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Height="30" Margin="360,240,0,0"/>
-                <TextBox x:Name="Password_TextBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Height="30" Margin="360,295,0,0"/>
+                <TextBox Style="{StaticResource searchTextbox}" x:Name="Name_TextBox" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="329" Height="49"  Foreground="Black" Margin="20,130,0,0"/>
+                <TextBox Style="{StaticResource searchTextbox}" x:Name="Login_TextBox" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="329" Height="49"  Foreground="Black" Margin="20,200,0,0"/>
+                <TextBox Style="{StaticResource searchTextbox}" x:Name="Email_TextBox" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="329" Height="49"  Foreground="Black" Margin="20,270,0,0"/>
+                <TextBox Style="{StaticResource searchTextbox}" x:Name="Password_TextBox" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="329" Height="49"  Foreground="Black" Margin="20,340,0,0"/>
             </Grid>
 
             <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Grid.ColumnSpan="2"/>

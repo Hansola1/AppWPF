@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "g6QHQfzQgyY=",
+  "dgSpecHash": "cN89meSzfZU=",
   "success": true,
   "projectFilePath": "D:\\С# С++ HTML\\C#\\AppWPF\\GeckoMarket\\GeckoMarket\\GeckoMarket.csproj",
   "expectedPackageFiles": [
@@ -46,6 +46,9 @@
     "C:\\Users\\Анастасия\\.nuget\\packages\\npgsql\\8.0.5\\npgsql.8.0.5.nupkg.sha512",
     "C:\\Users\\Анастасия\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\8.0.10\\npgsql.entityframeworkcore.postgresql.8.0.10.nupkg.sha512",
     "C:\\Users\\Анастасия\\.nuget\\packages\\pixieditor.colorpicker\\3.4.1\\pixieditor.colorpicker.3.4.1.nupkg.sha512",
+    "C:\\Users\\Анастасия\\.nuget\\packages\\sixlabors.fonts\\2.0.4\\sixlabors.fonts.2.0.4.nupkg.sha512",
+    "C:\\Users\\Анастасия\\.nuget\\packages\\sixlabors.imagesharp\\3.1.5\\sixlabors.imagesharp.3.1.5.nupkg.sha512",
+    "C:\\Users\\Анастасия\\.nuget\\packages\\sixlabors.imagesharp.drawing\\2.1.4\\sixlabors.imagesharp.drawing.2.1.4.nupkg.sha512",
     "C:\\Users\\Анастасия\\.nuget\\packages\\system.clientmodel\\1.0.0\\system.clientmodel.1.0.0.nupkg.sha512",
     "C:\\Users\\Анастасия\\.nuget\\packages\\system.configuration.configurationmanager\\8.0.0\\system.configuration.configurationmanager.8.0.0.nupkg.sha512",
     "C:\\Users\\Анастасия\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.1\\system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",
