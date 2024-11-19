@@ -106,3 +106,5 @@ D:\С# С++ HTML\C#\AppWPF\GeckoMarket\GeckoMarket\bin\Debug\net8.0-windows\runt
 D:\С# С++ HTML\C#\AppWPF\GeckoMarket\GeckoMarket\bin\Debug\net8.0-windows\SixLabors.Fonts.dll
 D:\С# С++ HTML\C#\AppWPF\GeckoMarket\GeckoMarket\bin\Debug\net8.0-windows\SixLabors.ImageSharp.dll
 D:\С# С++ HTML\C#\AppWPF\GeckoMarket\GeckoMarket\bin\Debug\net8.0-windows\SixLabors.ImageSharp.Drawing.dll
+D:\С# С++ HTML\C#\AppWPF\GeckoMarket\GeckoMarket\obj\Debug\net8.0-windows\Views\PlaceOrder.g.cs
+D:\С# С++ HTML\C#\AppWPF\GeckoMarket\GeckoMarket\obj\Debug\net8.0-windows\Views\PlaceOrder.baml

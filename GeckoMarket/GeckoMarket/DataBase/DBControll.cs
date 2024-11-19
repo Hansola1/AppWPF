@@ -12,7 +12,7 @@ namespace GeckoMarket.DataBase
 {
     public class DBControll
     {
-        private static string connectionString = ConfigurationManager.ConnectionStrings["GeckoMarket"].ConnectionString; 
+        private static string connectionString = ConfigurationManager.ConnectionStrings["GeckoMarket"].ConnectionString;
         NpgsqlConnection sqlConnection = new NpgsqlConnection(connectionString);
 
         private void Connection()
@@ -39,12 +39,12 @@ namespace GeckoMarket.DataBase
             while (dataReader.Read()) // Проверяем, есть ли данные
             {
                 CatalogData catalogData = new CatalogData(Convert.ToInt32(dataReader["CatalogID"]), dataReader["TypeReptile"].ToString(),
-                    dataReader["SexReptile"].ToString(), dataReader["MorphReptile"].ToString(),Convert.ToInt32(dataReader["CostReptile"])
+                    dataReader["SexReptile"].ToString(), dataReader["MorphReptile"].ToString(), Convert.ToInt32(dataReader["CostReptile"])
                 );
                 // каталог айди на самом деле айди товара, переименовать надо
                 catalogDataList.Add(catalogData);
-            }    
-            sqlConnection.Close(); 
+            }
+            sqlConnection.Close();
 
             return catalogDataList;
         }
@@ -65,7 +65,7 @@ namespace GeckoMarket.DataBase
             command.Parameters.AddWithValue("@email", email);
 
             command.ExecuteNonQuery(); // Выполнить команду
-           
+
             sqlConnection.Close();
         }
 
@@ -80,7 +80,7 @@ namespace GeckoMarket.DataBase
 
                 int count = Convert.ToInt32(command.ExecuteScalar());
                 return count > 0; // Если найден хотя бы один пользователь, возвращаем true
-                
+
             }
             catch (Exception)
             {
@@ -103,7 +103,7 @@ namespace GeckoMarket.DataBase
                 command.Parameters.AddWithValue("@password", password);
 
                 int count = Convert.ToInt32(command.ExecuteScalar());
-                return count > 0; 
+                return count > 0;
 
             }
             catch (Exception)
@@ -152,8 +152,8 @@ namespace GeckoMarket.DataBase
             command.Connection = sqlConnection;
 
             command.CommandText = "DELETE FROM public.\"Users\" WHERE \"UserID\" = @UserID";
-            command.Parameters.AddWithValue("@UserID", UserID); 
-            command.ExecuteNonQuery(); 
+            command.Parameters.AddWithValue("@UserID", UserID);
+            command.ExecuteNonQuery();
 
             sqlConnection.Close();
         }
@@ -164,7 +164,7 @@ namespace GeckoMarket.DataBase
 
             try
             {
-                using (NpgsqlCommand command = new NpgsqlCommand()) 
+                using (NpgsqlCommand command = new NpgsqlCommand())
                 {
                     command.Connection = sqlConnection;
                     command.CommandText = "SELECT \"UserID\" FROM public.\"Users\" WHERE \"login\" = @login";
@@ -182,6 +182,105 @@ namespace GeckoMarket.DataBase
             catch (Exception ex)
             {
                 MessageBox.Show($"Ошибка при получении UserID: {ex.Message}");
+            }
+            finally
+            {
+                sqlConnection.Close();
+            }
+
+            return null;
+        }
+
+        public void AddToBasket(int catalogID, int? userID, string typeReptile, string sexReptile, string morphReptile, int costReptile)
+        {
+            Connection();
+
+            using (NpgsqlCommand command = new NpgsqlCommand())
+            {
+                command.Connection = sqlConnection;
+                command.CommandText = "INSERT INTO public.\"Basket\" (\"CatalogID\", \"UsersID\", \"TypeReptile\", \"SexReptile\", \"MorphReptile\", \"CostReptile\") VALUES (@catalogID, @userID, @typeReptile, @sexReptile, @morphReptile, @costReptile)";
+                command.Parameters.AddWithValue("@catalogID", catalogID);
+                command.Parameters.AddWithValue("@userID", userID);
+                command.Parameters.AddWithValue("@typeReptile", typeReptile);
+                command.Parameters.AddWithValue("@sexReptile", sexReptile);
+                command.Parameters.AddWithValue("@morphReptile", morphReptile);
+                command.Parameters.AddWithValue("@costReptile", costReptile);
+
+                command.ExecuteNonQuery();
+            }
+        }
+
+        public List<BasketData> GetBasketItems(int? userID)
+        {
+            List<BasketData> items = new List<BasketData>();
+
+            Connection();
+
+            using (NpgsqlCommand command = new NpgsqlCommand("SELECT \"CatalogID\", \"TypeReptile\", \"SexReptile\", \"MorphReptile\", \"CostReptile\" FROM public.\"Basket\" WHERE \"UsersID\" = @userID", sqlConnection))
+            {
+                command.Parameters.AddWithValue("@userID", userID);
+
+                using (var reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        items.Add(new BasketData(
+                            reader.GetInt32(0),
+                            reader.GetString(1),
+                            reader.GetString(2),
+                            reader.GetString(3),
+                            reader.GetInt32(4)
+                        ));
+                    }
+                }
+            }
+            return items;
+        }
+
+        public void DeleteOrder(int catalogID, int basketID)
+        {
+            Connection();
+
+            using (NpgsqlCommand command = new NpgsqlCommand())
+            {
+                command.Connection = sqlConnection;
+
+                using (var catalogCommand = new NpgsqlCommand("DELETE FROM public.\"Catalog\" WHERE \"CatalogID\" = @CatalogID"))
+                {
+                    catalogCommand.Parameters.AddWithValue("@CatalogID", catalogID);
+                    catalogCommand.ExecuteNonQuery();
+                }
+                using (var BasketCommand = new NpgsqlCommand("DELETE FROM public.\"Basket\" WHERE \"ID\" = @BasketID"))
+                {
+                    BasketCommand.Parameters.AddWithValue("@BasketID", basketID);
+                    BasketCommand.ExecuteNonQuery();
+                }
+            }     
+        }
+        public int? GetBasketID(int catalogID)
+        {
+            Connection();
+
+            try
+            {
+                using (NpgsqlCommand command = new NpgsqlCommand())
+                {
+                    command.Connection = sqlConnection;
+                    command.CommandText = "SELECT \"BasketID\" FROM public.\"Basket\" WHERE \"CatalogID\" = @catalogID";
+                    command.Parameters.AddWithValue("@catalogID", catalogID);
+
+                    using (NpgsqlDataReader dataReader = command.ExecuteReader())
+                    {
+                        if (dataReader.Read())
+                        {
+                            return dataReader.GetInt32(0);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при получении BasketID: {ex.Message}");
             }
             finally
             {

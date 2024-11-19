@@ -25,6 +25,11 @@ namespace GeckoMarket.Views
         {
             MainFrame.Navigate(new BasketPage());
         }
+        private void Out_ButtonClick(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.CloseProgramm();
+        }
 
         private async void LoadCatalogDataAsync()
         {
@@ -39,23 +44,46 @@ namespace GeckoMarket.Views
 
         private void AddInBasket_Click(object sender, RoutedEventArgs e)
         {
-            BasketPage basketPage = new BasketPage();
+            var selectedItem = Catalog_DataGrid.SelectedItem as CatalogData; //забираем выбранный элемент мы же в чек бокс отметили))))))
+            //as СatalogData приводим к типу
 
-            if (UserSession.Visitor == true)
+            if (selectedItem != null)
             {
-                MessageBox.Show("Создайте аккаунт!!!");
-                MainFrame.Navigate(new RegistrationPage());
+                if (UserSession.Visitor == true)
+                {
+                    MessageBox.Show("Создайте аккаунт!!!");
+                    MainFrame.Navigate(new RegistrationPage());
+                }
+                AddItemToBasket(selectedItem);
+                MessageBox.Show("товар добавлен");
+
+                BasketPage basket = new BasketPage();
+                basket.LoadBasketItems();
             }
             else
             {
-                
+                MessageBox.Show("Выберите товар для добавления в корзину!");
             }
         }
 
-        private void Out_ButtonClick(object sender, RoutedEventArgs e)
+        private void AddItemToBasket(CatalogData selectedItem)
         {
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.CloseProgramm();
+            BasketPage basketPage = new BasketPage();
+
+            var basketItem = new BasketData(selectedItem.CatalogID, selectedItem.TypeReptile, selectedItem.SexReptile, selectedItem.MorphReptile, selectedItem.CostReptile);
+            SaveBasketItemToDatabase(basketItem);
+
+            basketPage.LoadBasketItems();
+        }
+
+        private void SaveBasketItemToDatabase(BasketData basketItem)
+        {
+            DBControll db = new DBControll();
+
+            string loginCurrentUser = UserSession.CurrentUserLogin;
+            int? сurrentUserId = db.GetCurrentUserID(loginCurrentUser);
+
+            db.AddToBasket(basketItem.CatalogID, сurrentUserId, basketItem.TypeReptile, basketItem.SexReptile, basketItem.MorphReptile, basketItem.CostReptile);
         }
     }
 }
