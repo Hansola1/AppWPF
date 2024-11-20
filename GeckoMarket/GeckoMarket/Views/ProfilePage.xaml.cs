@@ -60,6 +60,8 @@ namespace GeckoMarket.Views
                 if (userData != null)
                 {
                     Name_TextBox.Text = userData.nickname;
+                    SetUsersNameLabel(userData.nickname);
+
                     Login_TextBox.Text = loginCurrentUser;
                     Password_TextBox.Text = userData.password;
                     Email_TextBox.Text = userData.email;
@@ -71,6 +73,11 @@ namespace GeckoMarket.Views
         {
             MainWindow mainWindow = new MainWindow();
             mainWindow.CloseProgramm();
+        }
+
+        private void SetUsersNameLabel(string nameCurrent)
+        {
+            UsersName_TextBlock.Text = nameCurrent;
         }
     }
 }

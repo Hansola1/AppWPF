@@ -17,6 +17,10 @@ namespace GeckoMarket.Views
                 CreatUser();
                 MainFrame.Navigate(new LogInPage());
             }
+            else
+            {
+                MessageBox.Show("Данные введены некорректно");
+            }
         }
         private void LogIn_Click(object sender, RoutedEventArgs e)
         {

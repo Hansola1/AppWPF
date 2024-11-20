@@ -12,6 +12,7 @@ namespace GeckoMarket.Views
         {
             InitializeComponent();
             LoadBasketItems();
+            SetUsersNameLabel();
         }
 
         private void ProfileButton_Click(object sender, RoutedEventArgs e)
@@ -35,9 +36,9 @@ namespace GeckoMarket.Views
 
         public void LoadBasketItems()
         {
-            if (UserSession.Visitor == true)
+            if (UserSession.IsLoggedIn == false)
             {
-                MessageBox.Show("Создайте аккаунт :)");
+                MessageBox.Show("Создайте аккаунт!!!");
                 MainFrame.Navigate(new RegistrationPage());
             }
             else
@@ -62,7 +63,7 @@ namespace GeckoMarket.Views
             var selectedItem = Basket_DataGrid.SelectedItem as BasketData;
             if (selectedItem != null)
             {
-                if (UserSession.Visitor == true)
+                if (UserSession.IsLoggedIn == false)
                 {
                     MessageBox.Show("Создайте аккаунт!!!");
                     MainFrame.Navigate(new RegistrationPage());
@@ -75,6 +76,22 @@ namespace GeckoMarket.Views
             else
             {
                 MessageBox.Show("Выберите товар!");
+            }
+        }
+
+        public void SetUsersNameLabel()
+        {
+            DBControll db = new DBControll();
+
+            if (UserSession.IsLoggedIn)
+            {
+                string loginCurrentUser = UserSession.CurrentUserLogin;
+                var userData = db.GetUserData(loginCurrentUser);
+
+                if (userData != null)
+                {
+                    UsersName_TextBlock.Text = userData.nickname;
+                }
             }
         }
     }

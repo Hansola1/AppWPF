@@ -46,7 +46,7 @@
 
 
                         <!--Меню надпись-->
-                        <TextBlock Text="Users" Foreground="White" FontSize="22" FontWeight="SemiBold" DockPanel.Dock="Top" Margin="-25 5 0 3" TextAlignment="Center"/>
+                        <TextBlock x:Name="UsersName_TextBlock" Text="Users" Foreground="White" FontSize="22" FontWeight="SemiBold" DockPanel.Dock="Top" Margin="-25 5 0 3" TextAlignment="Center"/>
 
                         <!--Меню палочка-->
                         <Separator Margin="25" Background="White" DockPanel.Dock="Top" Height="0.9"/>
