@@ -113,15 +113,15 @@
                 <TextBlock Text="Пароль:" FontSize="25"  Margin="168,340,0,0" Foreground="#121518" HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5" Width="120">
                 </TextBlock>
 
-                <Border CornerRadius="15" Background="Black" Margin="228,441,330,10">
-                    <Button Height="NaN" x:Name="Login_Button" FontSize="25" FontWeight="Bold"  Background="Transparent" Foreground="Black" BorderBrush="Transparent" Click="DeleteAccount_Click" Margin="0,-11,0,-9"/>
+                <Border CornerRadius="15" Background="Black" Margin="172,420,266,30">
+                    <Button x:Name="Login_Button" Style="{StaticResource menuButton}"  FontWeight="Bold"  Background="Transparent" Foreground="White" Click="DeleteAccount_Click" BorderBrush="Transparent" Margin="-17,0,0,0" Height="NaN"/>
                 </Border>
-                <TextBlock Text="Удалить аккаунт" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="172,458,0,-3" TextAlignment="Center" Foreground="White" Width="433"/>
+                <TextBlock Text="Удалить аккаунт" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="304,437,0,43" TextAlignment="Center" Foreground="White" Width="167"/>
 
-                <TextBox Style="{StaticResource searchTextbox}" x:Name="Name_TextBox" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="329" Height="49"  Foreground="Black" Margin="20,130,0,0"/>
-                <TextBox Style="{StaticResource searchTextbox}" x:Name="Login_TextBox" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="329" Height="49"  Foreground="Black" Margin="20,200,0,0"/>
-                <TextBox Style="{StaticResource searchTextbox}" x:Name="Email_TextBox" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="329" Height="49"  Foreground="Black" Margin="20,270,0,0"/>
-                <TextBox Style="{StaticResource searchTextbox}" x:Name="Password_TextBox" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="329" Height="49"  Foreground="Black" Margin="20,340,0,0"/>
+                <TextBox IsReadOnly="True" Style="{StaticResource searchTextbox}" x:Name="Name_TextBox" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="329" Height="49"  Foreground="Black" Margin="20,130,0,0"/>
+                <TextBox IsReadOnly="True" Style="{StaticResource searchTextbox}" x:Name="Login_TextBox" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="329" Height="49"  Foreground="Black" Margin="20,200,0,0"/>
+                <TextBox IsReadOnly="True" Style="{StaticResource searchTextbox}" x:Name="Email_TextBox" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="329" Height="49"  Foreground="Black" Margin="20,270,0,0"/>
+                <TextBox IsReadOnly="True" Style="{StaticResource searchTextbox}" x:Name="Password_TextBox" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="329" Height="49"  Foreground="Black" Margin="20,340,0,0"/>
             </Grid>
 
             <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Grid.ColumnSpan="2"/>

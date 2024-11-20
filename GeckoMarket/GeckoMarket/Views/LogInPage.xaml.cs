@@ -1,7 +1,8 @@
-﻿using GeckoMarket.DataBase;
-using System;
-using System.Windows;
+﻿using System.Windows;
+using System.Drawing;
 using System.Windows.Controls;
+using System.Windows.Media;
+using GeckoMarket.DataBase;
 
 namespace GeckoMarket.Views
 {

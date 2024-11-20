@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Configuration;
+﻿using System.Configuration;
 using Npgsql;
 using System.Windows;
 using Npgsql.Internal;
 using GeckoMarket.Views;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace GeckoMarket.DataBase
 {
@@ -233,6 +231,7 @@ namespace GeckoMarket.DataBase
                         ));
                     }
                 }
+                
             }
             return items;
         }
@@ -241,22 +240,37 @@ namespace GeckoMarket.DataBase
         {
             Connection();
 
-            using (NpgsqlCommand command = new NpgsqlCommand())
+            using (var transaction = sqlConnection.BeginTransaction())
             {
-                command.Connection = sqlConnection;
+                // Использую транзакцию чтоб удалить все записи из Basket, которые ссылаются на Catalog.
+                // Чтоб не случилось, што я удалила связанную запись в одной таблц, а в другой осталось. Либо да все снесем, либо нет ничего!
 
-                using (var catalogCommand = new NpgsqlCommand("DELETE FROM public.\"Catalog\" WHERE \"CatalogID\" = @CatalogID"))
+                // а иначе ошибка Npgsql.PostgresException: "23503: UPDATE или DELETE в таблице "Catalog" нарушает ограничение внешнего ключа ...
+
+                try
                 {
-                    catalogCommand.Parameters.AddWithValue("@CatalogID", catalogID);
-                    catalogCommand.ExecuteNonQuery();
+                    using (var basketCommand = new NpgsqlCommand("DELETE FROM public.\"Basket\" WHERE \"CatalogID\" = @CatalogID", sqlConnection, transaction))
+                    {
+                        basketCommand.Parameters.AddWithValue("@CatalogID", catalogID);
+                        basketCommand.ExecuteNonQuery();
+                    }
+
+                    using (var catalogCommand = new NpgsqlCommand("DELETE FROM public.\"Catalog\" WHERE \"CatalogID\" = @CatalogID", sqlConnection, transaction))
+                    {
+                        catalogCommand.Parameters.AddWithValue("@CatalogID", catalogID);
+                        catalogCommand.ExecuteNonQuery();
+                    }
+
+                    transaction.Commit(); // Подтверждаем транзакцию
                 }
-                using (var BasketCommand = new NpgsqlCommand("DELETE FROM public.\"Basket\" WHERE \"ID\" = @BasketID"))
+                catch (Exception ex)
                 {
-                    BasketCommand.Parameters.AddWithValue("@BasketID", basketID);
-                    BasketCommand.ExecuteNonQuery();
+                    transaction.Rollback(); // Откатываем транзакцию в случае ошибки
+                    MessageBox.Show($"Ошибка при удалении заказа: {ex.Message}");
                 }
-            }     
+            }
         }
+
         public int? GetBasketID(int catalogID)
         {
             Connection();
@@ -266,7 +280,7 @@ namespace GeckoMarket.DataBase
                 using (NpgsqlCommand command = new NpgsqlCommand())
                 {
                     command.Connection = sqlConnection;
-                    command.CommandText = "SELECT \"BasketID\" FROM public.\"Basket\" WHERE \"CatalogID\" = @catalogID";
+                    command.CommandText = "SELECT \"ID\" FROM public.\"Basket\" WHERE \"CatalogID\" = @catalogID";
                     command.Parameters.AddWithValue("@catalogID", catalogID);
 
                     using (NpgsqlDataReader dataReader = command.ExecuteReader())
@@ -280,7 +294,7 @@ namespace GeckoMarket.DataBase
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка при получении BasketID: {ex.Message}");
+                MessageBox.Show($"Ошибка при получении ID: {ex.Message}");
             }
             finally
             {

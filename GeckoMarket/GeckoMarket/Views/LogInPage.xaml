@@ -19,13 +19,13 @@
             <Grid Grid.Column="1" Margin="30 20 20 20">
 
                 <!-- Заголовок "Войти" -->
-                <TextBlock Text="Войти в аккаунт" FontSize="36" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="315,0,0,0" Height="432"/>
+                <TextBlock Text="Войти в аккаунт" FontSize="36" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="315,-350,0,0" Height="48"/>
 
                 <!-- Поля ввода данных -->
                 <StackPanel Margin="0,189,0,140" HorizontalAlignment="Center" Width="400">
                     <!-- Поле ввода Логин -->
                     <TextBlock Text="Логин:" FontFamily="Verdana" FontSize="20" Margin="2,16,0,5"/>
-                    <Border CornerRadius="10" BorderBrush="#FFA7A7A7" Background="Transparent" BorderThickness="1">
+                    <Border x:Name="BorderLogin" CornerRadius="10" BorderBrush="#FFA7A7A7" Background="Transparent" BorderThickness="1">
                         <TextBox x:Name="Login_TextBox" Width="399" Height="45" FontSize="25" Background="Transparent" BorderThickness="0"/>
                     </Border>
 
@@ -37,12 +37,12 @@
                 </StackPanel>
 
                 <!-- Кнопка "Войти" -->
-                <Border CornerRadius="15" Background="Black" Width="400" Margin="315,459,315,149">
-                    <Button Height="NaN" x:Name="Login_Button" FontSize="25" FontWeight="Bold"  Background="Transparent" Foreground="White" BorderBrush="Transparent" Click="LogIn_Click" Margin="0,-11,0,-9"/>
+                <Border CornerRadius="15" Background="Black" Width="400" Margin="315,437,315,170">
+                    <Button Style="{StaticResource menuButton}" Height="NaN" x:Name="Login_Button" FontSize="25" FontWeight="Bold"  Background="Transparent" Foreground="White" BorderBrush="Transparent" Click="LogIn_Click" Margin="0,-11,0,-9"/>
                 </Border>
-                <TextBlock Text="Войти" FontSize="28" FontWeight="Bold" HorizontalAlignment="Left" Margin="318,472,0,149" TextAlignment="Center" Foreground="White" Width="381"/>
-                <TextBlock Text="У вас нет аккаунта?" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="318,540,0,104" TextAlignment="Center" Foreground="#FF8F8F8F"/>
-                <Button Style="{StaticResource menuButton}" Content="Создать" FontSize="18" FontWeight="Bold"  Background="Transparent" Foreground="Black" Margin="515,526,0,98" HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5" BorderBrush="{x:Null}" Width="84" Click="CreatAccount_Click">
+                <TextBlock Text="Войти" FontSize="28" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,455,0,184" TextAlignment="Center" Foreground="White" Width="110"/>
+                <TextBlock Text="У вас нет аккаунта?" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="318,520,0,124" TextAlignment="Center" Foreground="#FF8F8F8F"/>
+                <Button Style="{StaticResource menuButton}" Content="Создать" FontSize="18" FontWeight="Bold"  Background="Transparent" Foreground="Black" Margin="515,512,0,124" HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5" BorderBrush="{x:Null}" Width="84" Click="CreatAccount_Click">
                 </Button>
 
             </Grid>

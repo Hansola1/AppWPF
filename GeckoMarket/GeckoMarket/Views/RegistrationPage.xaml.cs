@@ -1,19 +1,6 @@
 ﻿using GeckoMarket.DataBase;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics.Eventing.Reader;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace GeckoMarket.Views
 {
@@ -41,7 +28,6 @@ namespace GeckoMarket.Views
             MainFrame.Navigate(new CatalogPage());
         }
 
-
         private bool validationData()
         {
             DBControll db = new DBControll();
@@ -53,15 +39,15 @@ namespace GeckoMarket.Views
             string passwordDuplicate = PasswordBoxDuplicate.Password.Trim();
             // Trim() - убирает пробелы из строки.
 
-            if (string.IsNullOrEmpty(login) || login.Length < 3)
+            if (string.IsNullOrEmpty(login) || login.Length < 5)
             {
                 return false;
             }
-            else if(string.IsNullOrEmpty(email))
+            else if(string.IsNullOrEmpty(email) && !email.Contains('@'))
             {
                 return false;
             }
-            else if (string.IsNullOrEmpty(password) || password.Length < 3)
+            else if (string.IsNullOrEmpty(password) || password.Length < 5)
             {
                 return false;
             }

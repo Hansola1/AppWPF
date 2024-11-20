@@ -1,11 +1,6 @@
-﻿using Avalonia.Controls;
-using GeckoMarket.DataBase;
-using System;
-using System.Collections.ObjectModel;
-using System.Globalization;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
+using GeckoMarket.DataBase;
 
 namespace GeckoMarket.Views
 {
@@ -40,7 +35,15 @@ namespace GeckoMarket.Views
 
         public void LoadBasketItems()
         {
-            LoadBasketItemsFromDatabase();
+            if (UserSession.Visitor == true)
+            {
+                MessageBox.Show("Создайте аккаунт :)");
+                MainFrame.Navigate(new RegistrationPage());
+            }
+            else
+            {
+                LoadBasketItemsFromDatabase();
+            }
         }
 
         private void LoadBasketItemsFromDatabase()
@@ -65,9 +68,13 @@ namespace GeckoMarket.Views
                     MainFrame.Navigate(new RegistrationPage());
                 }
                 else
-                { 
-                    MainFrame.Navigate(new PlaceOrder());
+                {
+                    MainFrame.Navigate(new PlaceOrder(selectedItem));
                 }
+            }
+            else
+            {
+                MessageBox.Show("Выберите товар!");
             }
         }
     }

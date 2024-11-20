@@ -10,7 +10,6 @@
        Title="PlaceOrder" Height="720" Width="1080" MaxHeight="720" MaxWidth="1080" 
       Background="Transparent">
 
-
     <!--Боковая панель-->
     <Border CornerRadius="10" Background="#f0f0f2">
         <Grid>
@@ -19,39 +18,38 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-
             <!--Main Section-->
-            <Grid Grid.Column="1" Margin="30 20 20 20">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="auto"/>
-                </Grid.RowDefinitions>
+            <Grid Margin="48,46,50,41" Grid.ColumnSpan="2">
+                <Grid>
+                    <Border CornerRadius="30" Background="White" >
+                        <Border.Effect>
+                            <DropShadowEffect BlurRadius="30" Color="#f1f1f3" ShadowDepth="0"></DropShadowEffect>
+                        </Border.Effect>
+                    </Border>
 
+                    <!--Заголовок-->
+                    <TextBlock Text="Оформление заказа" FontSize="40" FontWeight="SemiBold" TextAlignment="Left" Margin="72,43,526,526"/>
+                </Grid>
 
-                <!--Заголовок-->
-                <TextBlock Text="Оформление заказа" Grid.Row="1" FontSize="40" FontWeight="SemiBold" TextAlignment="Left" Margin="0,33,366,601" Grid.RowSpan="5">
-                </TextBlock>
+                <TextBlock Text="Банковская карта" FontSize="25" FontWeight="SemiBold" HorizontalAlignment="Left" Margin="77,219,0,372" TextAlignment="Center" Foreground="Black" Width="207"/>
+                <TextBox Style="{StaticResource searchTextbox}" x:Name="card_TextBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="403" Height="42"  Foreground="Black" Margin="333,219,0,0"/>
+
+                <TextBlock Text="Адрес" FontSize="25" FontWeight="SemiBold" HorizontalAlignment="Left" Margin="77,282,0,317" TextAlignment="Center" Foreground="Black" Width="78"/>
+                <TextBox Style="{StaticResource searchTextbox}" x:Name="address_TextBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="403" Height="42"  Foreground="Black" Margin="333,282,0,0"/>
+
+                <Border CornerRadius="15" Background="Black" Margin="333,499,246,70" RenderTransformOrigin="0.5,0.5">
+                    <Button Style="{StaticResource pagingButton}" Click="confirm_click" Height="NaN" FontSize="25" FontWeight="Bold"  Background="Transparent" Foreground="Black" BorderBrush="Transparent" Margin="0,-11,0,-9"/>
+                </Border>
+                <TextBlock Text="Оформить заказ" FontSize="25" FontWeight="Bold" HorizontalAlignment="Left" Margin="425,514,0,88" TextAlignment="Center" Foreground="White" Width="213"/>
+
+                <Border CornerRadius="15" Background="Transparent" Margin="861,34,23,538" RenderTransformOrigin="0.5,0.5">
+                    <Button Style="{StaticResource pagingButton}" Click="cancel_click" Height="NaN" FontSize="25" FontWeight="Bold"  Background="Transparent" Foreground="Black" BorderBrush="Transparent" Margin="0,-11,0,-9">
+                        <Icon:PackIconMaterial Kind="Close" Style="{StaticResource menuButtonIcon}" Height="30" Width="28" VerticalAlignment="Top"/>
+                    </Button>
+                </Border>
+
+                <!--<TextBlock Text="Вернуться в корзину" FontSize="18" FontWeight="Bold" HorizontalAlignment="Left" Margin="138,521,0,81" TextAlignment="Center" Foreground="White" Width="189" RenderTransformOrigin="0.5,0.5">-->
             </Grid>
-
-            <TextBlock Text="Банковская карта" FontSize="24" FontWeight="Bold" HorizontalAlignment="Left" Margin="0,254,0,203" TextAlignment="Center" Foreground="Black" Width="245" Grid.Column="1"/>
-
-            <TextBox Style="{StaticResource searchTextbox}" x:Name="card_TextBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="345" Height="36"  Foreground="Black" Margin="250,254,0,0" Grid.Column="1"/>
-
-            <Border CornerRadius="15" Background="Black" Margin="245,360,285,293" Grid.Column="1">
-                <Button Click="confirm_click" Height="NaN" FontSize="25" FontWeight="Bold"  Background="Transparent" Foreground="Black" BorderBrush="Transparent" Margin="0,-11,0,-9"/>
-            </Border>
-            <TextBlock Text="Оформить заказ" FontSize="25" FontWeight="Bold" HorizontalAlignment="Left" Margin="304,370,0,293" TextAlignment="Center" Foreground="White" Width="221" Grid.Column="1"/>
-
-            <Border CornerRadius="15" Background="Black" Margin="10,360,649,293" Grid.Column="1">
-                <Button Click="cancel_click" Height="NaN" FontSize="25" FontWeight="Bold"  Background="Transparent" Foreground="Black" BorderBrush="Transparent" Margin="0,-11,0,-9"/>
-            </Border>
-            <TextBlock Text="Вернуться в корзину" FontSize="18" FontWeight="Bold" HorizontalAlignment="Left" Margin="30,377,0,312" TextAlignment="Center" Foreground="White" Width="188" Grid.Column="1"/>
-
             <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Grid.ColumnSpan="2"></Frame>
         </Grid>
     </Border>

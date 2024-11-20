@@ -1,6 +1,4 @@
-﻿using System;
-
-public class CatalogData
+﻿public class CatalogData
 {
     public int CatalogID { get; set; } //на самом деле айди 1 товара, лень менять уже название
     public string TypeReptile { get; set; } = "";

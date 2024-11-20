@@ -1,5 +1,4 @@
-﻿using System;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 using GeckoMarket.DataBase;
 
@@ -45,24 +44,25 @@ namespace GeckoMarket.Views
         private void AddInBasket_Click(object sender, RoutedEventArgs e)
         {
             var selectedItem = Catalog_DataGrid.SelectedItem as CatalogData; //забираем выбранный элемент мы же в чек бокс отметили))))))
-            //as СatalogData приводим к типу
-
-            if (selectedItem != null)
+                                                                             //as СatalogData приводим к типу
+            if (UserSession.Visitor == true)
             {
-                if (UserSession.Visitor == true)
-                {
-                    MessageBox.Show("Создайте аккаунт!!!");
-                    MainFrame.Navigate(new RegistrationPage());
-                }
-                AddItemToBasket(selectedItem);
-                MessageBox.Show("товар добавлен");
-
-                BasketPage basket = new BasketPage();
-                basket.LoadBasketItems();
+                MessageBox.Show("Создайте аккаунт!!!");
+                MainFrame.Navigate(new RegistrationPage());
             }
             else
             {
-                MessageBox.Show("Выберите товар для добавления в корзину!");
+                if (selectedItem != null)
+                {
+                    AddItemToBasket(selectedItem);
+
+                    BasketPage basket = new BasketPage();
+                    basket.LoadBasketItems();
+                }
+                else
+                {
+                    MessageBox.Show("Выберите товар для добавления в корзину!");
+                }
             }
         }
 
@@ -71,9 +71,35 @@ namespace GeckoMarket.Views
             BasketPage basketPage = new BasketPage();
 
             var basketItem = new BasketData(selectedItem.CatalogID, selectedItem.TypeReptile, selectedItem.SexReptile, selectedItem.MorphReptile, selectedItem.CostReptile);
-            SaveBasketItemToDatabase(basketItem);
 
-            basketPage.LoadBasketItems();
+            if (!IsItemInBasket(selectedItem)) 
+            {
+                SaveBasketItemToDatabase(basketItem);
+                basketPage.LoadBasketItems();
+            }
+            else
+            {
+                MessageBox.Show("Этот товар уже есть в вашей корзине."); 
+            }
+        }
+
+        private bool IsItemInBasket(CatalogData selectedItem)
+        {
+            DBControll db = new DBControll();
+
+            string loginCurrentUser = UserSession.CurrentUserLogin;
+            int? currentUserId = db.GetCurrentUserID(loginCurrentUser);
+
+            List<BasketData> currentBasketItems = db.GetBasketItems(currentUserId);
+
+            foreach (var item in currentBasketItems)
+            {
+                if (item.CatalogID == selectedItem.CatalogID)
+                {
+                    return true;
+                }
+            }
+            return false; 
         }
 
         private void SaveBasketItemToDatabase(BasketData basketItem)

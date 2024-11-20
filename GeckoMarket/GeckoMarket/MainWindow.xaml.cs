@@ -1,11 +1,8 @@
 ﻿using System.Windows;
-using System.Collections.ObjectModel;
-using System.Windows.Controls;
-using System.Windows.Data;
 using System.Windows.Input;
-using System;
 using GeckoMarket.Views;
-
+using GeckoMarket.DataBase;
+using System.Windows.Controls;
 
 namespace GeckoMarket
 {

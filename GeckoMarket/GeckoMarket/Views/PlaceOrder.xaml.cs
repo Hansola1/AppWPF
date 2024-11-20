@@ -1,16 +1,17 @@
-﻿using GeckoMarket.DataBase;
-using System;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
+using GeckoMarket.DataBase;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Model;
 
 namespace GeckoMarket.Views
 {
     public partial class PlaceOrder : Page
     {
-        public PlaceOrder()
+        private BasketData selectedItem;
+        public PlaceOrder(BasketData selectedItem)
         {
             InitializeComponent();
+            this.selectedItem = selectedItem;
         }
 
         private void cancel_click(object sender, RoutedEventArgs e)
@@ -20,15 +21,16 @@ namespace GeckoMarket.Views
 
         private void confirm_click(object sender, RoutedEventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(card_TextBox.Text))
+            if (validationData() != false)
             {
-                BasketPage basket = new BasketPage();
-                var selectedItem = basket.Basket_DataGrid.SelectedItem as BasketData; // разобраться почему всегда нулевой,хотя выбрали же
+                //var selectedItem = basket.Basket_DataGrid.SelectedItem as BasketData; // всегда null?!
 
                 if (selectedItem != null)
                 {
                     placeAnOrder(selectedItem);
                     MessageBox.Show("Заказ успешно оформлен!");
+
+                    MainFrame.Navigate(new BasketPage());
                 }
                 else
                 {
@@ -39,6 +41,22 @@ namespace GeckoMarket.Views
             {
                 MessageBox.Show("Введите данные карты...");
             }
+        }
+
+        private bool validationData()
+        {
+            string card = card_TextBox.Text.Trim();
+            string address = address_TextBox.Text.Trim();
+
+            if(card.Length < 16) // карты стандартно 16 символов имеют
+            {
+                return false;
+            }
+            if(!string.IsNullOrWhiteSpace(card_TextBox.Text) && !string.IsNullOrWhiteSpace(address_TextBox.Text))
+            {
+                return true;
+            }
+            return true;
         }
 
         public void placeAnOrder(BasketData selectedItem)
