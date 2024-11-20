@@ -17,10 +17,6 @@ namespace GeckoMarket.Views
                 CreatUser();
                 MainFrame.Navigate(new LogInPage());
             }
-            else
-            {
-                MessageBox.Show("Данные введены некорректно");
-            }
         }
         private void LogIn_Click(object sender, RoutedEventArgs e)
         {
@@ -45,18 +41,22 @@ namespace GeckoMarket.Views
 
             if (string.IsNullOrEmpty(login) || login.Length < 5)
             {
+                MessageBox.Show("Логин должен содержать минимум 5 символов.");
                 return false;
             }
-            else if(string.IsNullOrEmpty(email) && !email.Contains('@'))
+            else if(string.IsNullOrEmpty(email) || !email.Contains('@'))
             {
+                MessageBox.Show("Введите корректный адрес электронной почты.");
                 return false;
             }
             else if (string.IsNullOrEmpty(password) || password.Length < 5)
             {
+                MessageBox.Show("Пароль должен содержать минимум 5 символов.");
                 return false;
             }
             else if (string.IsNullOrEmpty(passwordDuplicate) || password != passwordDuplicate)
             {
+                MessageBox.Show("Пароли не совпадают.");
                 return false;
             }
             else if (db.UserExists(Login_TextBox.Text) == true)
