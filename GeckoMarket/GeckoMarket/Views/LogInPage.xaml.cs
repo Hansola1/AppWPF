@@ -47,7 +47,7 @@ namespace GeckoMarket.Views
                 PasswordBox.ToolTip = "Заполните поле!";
                 return false; 
             }
-            else if(db.dateVerification(Login_TextBox.Text, PasswordBox.Password) == false)
+            else if(db.dateVerification(login, password) == false)
             {
                 MessageBox.Show("Неверные данные");
                 return false;

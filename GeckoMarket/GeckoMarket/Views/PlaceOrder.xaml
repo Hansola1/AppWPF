@@ -31,11 +31,17 @@
                     <TextBlock Text="Оформление заказа" FontSize="40" FontWeight="SemiBold" TextAlignment="Left" Margin="72,43,526,526"/>
                 </Grid>
 
-                <TextBlock Text="Банковская карта" FontSize="25" FontWeight="SemiBold" HorizontalAlignment="Left" Margin="77,219,0,372" TextAlignment="Center" Foreground="Black" Width="207"/>
-                <TextBox Style="{StaticResource searchTextbox}" x:Name="card_TextBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="403" Height="42"  Foreground="Black" Margin="333,219,0,0"/>
+                <TextBlock Text="Срок действия карты" FontSize="25" FontWeight="SemiBold" HorizontalAlignment="Left" Margin="77,157,0,438" TextAlignment="Center" Foreground="Black" Width="252"/>
+                <TextBox Style="{StaticResource searchTextbox}" x:Name="dataCard_TextBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="350" Height="42"  Foreground="Black" Margin="386,157,0,0"/>
 
-                <TextBlock Text="Адрес" FontSize="25" FontWeight="SemiBold" HorizontalAlignment="Left" Margin="77,282,0,317" TextAlignment="Center" Foreground="Black" Width="78"/>
-                <TextBox Style="{StaticResource searchTextbox}" x:Name="address_TextBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="403" Height="42"  Foreground="Black" Margin="333,282,0,0"/>
+                <TextBlock Text="Счет карты" FontSize="25" FontWeight="SemiBold" HorizontalAlignment="Left" Margin="77,219,0,372" TextAlignment="Center" Foreground="Black" Width="52"/>
+                <TextBox Style="{StaticResource searchTextbox}" x:Name="card_TextBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="350" Height="42"  Foreground="Black" Margin="386,219,0,0"/>
+
+                <TextBlock Text="CVC" FontSize="25" FontWeight="SemiBold" HorizontalAlignment="Left" Margin="77,282,0,317" TextAlignment="Center" Foreground="Black" Width="52"/>
+                <TextBox Style="{StaticResource searchTextbox}" x:Name="CVC_TextBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="350" Height="42"  Foreground="Black" Margin="386,282,0,0"/>
+
+                <TextBlock Text="Адрес" FontSize="25" FontWeight="SemiBold" HorizontalAlignment="Left" Margin="77,347,0,245" TextAlignment="Center" Foreground="Black" Width="78"/>
+                <TextBox Style="{StaticResource searchTextbox}" x:Name="address_TextBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="350" Height="41"  Foreground="Black" Margin="386,347,0,0"/>
 
                 <Border CornerRadius="15" Background="Black" Margin="333,499,246,70" RenderTransformOrigin="0.5,0.5">
                     <Button Style="{StaticResource pagingButton}" Click="confirm_click" Height="NaN" FontSize="25" FontWeight="Bold"  Background="Transparent" Foreground="Black" BorderBrush="Transparent" Margin="0,-11,0,-9"/>

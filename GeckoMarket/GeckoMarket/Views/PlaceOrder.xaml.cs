@@ -46,15 +46,29 @@ namespace GeckoMarket.Views
         private bool validationData()
         {
             string card = card_TextBox.Text.Trim();
+            string dataCard = dataCard_TextBox.Text.Trim(); 
+            string CVC = CVC_TextBox.Text.Trim();
             string address = address_TextBox.Text.Trim();
 
-            if(card.Length < 16) // карты стандартно 16 символов имеют
+            if(card.Length < 16 || string.IsNullOrWhiteSpace(card_TextBox.Text)) // карты стандартно 16 символов имеют
             {
+                MessageBox.Show("Введите счет корректно");
                 return false;
             }
-            if(!string.IsNullOrWhiteSpace(card_TextBox.Text) && !string.IsNullOrWhiteSpace(address_TextBox.Text))
+            if (CVC.Length > 3 || string.IsNullOrWhiteSpace(CVC_TextBox.Text))
             {
-                return true;
+                MessageBox.Show("Введите CVC корректно");
+                return false ;
+            }
+            if (dataCard.Length < 10 || string.IsNullOrWhiteSpace(dataCard_TextBox.Text))
+            {
+                MessageBox.Show("Введите срок действия карты корректно");
+                return false;
+            }
+            if(string.IsNullOrWhiteSpace(address_TextBox.Text))
+            {
+                MessageBox.Show("Введите адрес карты корректно");
+                return false;
             }
             return true;
         }

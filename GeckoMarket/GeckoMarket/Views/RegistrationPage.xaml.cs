@@ -44,7 +44,7 @@ namespace GeckoMarket.Views
                 MessageBox.Show("Логин должен содержать минимум 5 символов.");
                 return false;
             }
-            else if(string.IsNullOrEmpty(email) || !email.Contains('@'))
+            else if(string.IsNullOrEmpty(email) || !email.Contains('@') || !email.Contains('.'))
             {
                 MessageBox.Show("Введите корректный адрес электронной почты.");
                 return false;
@@ -59,7 +59,7 @@ namespace GeckoMarket.Views
                 MessageBox.Show("Пароли не совпадают.");
                 return false;
             }
-            else if (db.UserExists(Login_TextBox.Text) == true)
+            else if (db.UserExists(login) == true)
             {
                 MessageBox.Show("Такой аккаунт существует");
                 return false;
