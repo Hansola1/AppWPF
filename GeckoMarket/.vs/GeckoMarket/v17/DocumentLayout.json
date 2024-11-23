@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "GeckoMarket\\Views\\PlaceOrder.xaml.cs",
               "ToolTip": "D:\\\u0421# \u0421\u002B\u002B HTML\\C#\\AppWPF\\GeckoMarket\\GeckoMarket\\Views\\PlaceOrder.xaml.cs",
               "RelativeToolTip": "GeckoMarket\\Views\\PlaceOrder.xaml.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAAD8AAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-21T03:27:09.608Z",
               "EditorCaption": ""
@@ -46,8 +46,7 @@
               "ToolTip": "D:\\\u0421# \u0421\u002B\u002B HTML\\C#\\AppWPF\\GeckoMarket\\GeckoMarket\\Views\\PlaceOrder.xaml",
               "RelativeToolTip": "GeckoMarket\\Views\\PlaceOrder.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-21T03:27:05.425Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T03:27:05.425Z"
             },
             {
               "$type": "Document",
@@ -59,8 +58,7 @@
               "RelativeToolTip": "GeckoMarket\\Views\\LogInPage.xaml.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAnwCwAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T02:36:52.025Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T02:36:52.025Z"
             }
           ]
         }
