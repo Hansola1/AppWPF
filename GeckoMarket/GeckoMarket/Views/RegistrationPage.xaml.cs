@@ -44,7 +44,7 @@ namespace GeckoMarket.Views
                 MessageBox.Show("Логин должен содержать минимум 5 символов.");
                 return false;
             }
-            else if(string.IsNullOrEmpty(email) || !email.Contains('@') || !email.Contains('.'))
+            else if(string.IsNullOrEmpty(email) || !email.Contains('@')) //|| !email.Contains('.'))
             {
                 MessageBox.Show("Введите корректный адрес электронной почты.");
                 return false;
