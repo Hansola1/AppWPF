@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GeckoMarket")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+22832a87ee67e20b54104a02389910d439df6ea2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9b1676081803c56210f963c00ebf887679076b3d")]
 [assembly: System.Reflection.AssemblyProductAttribute("GeckoMarket")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GeckoMarket")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
