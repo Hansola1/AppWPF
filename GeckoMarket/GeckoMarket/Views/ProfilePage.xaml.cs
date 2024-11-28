@@ -23,6 +23,15 @@ namespace GeckoMarket.Views
         {
             MainFrame.Navigate(new BasketPage());
         }
+        private void Orders_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new OrdersPage());
+        }
+        private void ProfileCancel_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new ProfilePage());
+        }
+
         private void DeleteAccount_Click(object sender, RoutedEventArgs e)
         {
             DBControll db = new DBControll();

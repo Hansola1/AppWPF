@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 D:\С# С++ HTML\C#\AppWPF\GeckoMarket\GeckoMarket\App.xaml
-8621810854
+9-366520039
 
-161997921140
+171036096174
 250-99139069
-MainWindow.xaml;UseControl\SearchControl.xaml;Views\BasketPage.xaml;Views\CatalogPage.xaml;Views\LogInPage.xaml;Views\PlaceOrder.xaml;Views\ProfilePage.xaml;Views\RegistrationPage.xaml;
+MainWindow.xaml;UseControl\SearchControl.xaml;Views\BasketPage.xaml;Views\CatalogPage.xaml;Views\LogInPage.xaml;Views\OrdersPage.xaml;Views\PlaceOrder.xaml;Views\ProfilePage.xaml;Views\RegistrationPage.xaml;
 
 False
 

@@ -1,0 +1,146 @@
+﻿<Page x:Class="GeckoMarket.Views.OrdersPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GeckoMarket.Views"
+      xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+      mc:Ignorable="d" 
+      d:DesignHeight="720" d:DesignWidth="1080"
+      Title="OrdersPage" Height="720" Width="1080" MaxHeight="720" MaxWidth="1080" 
+      Background="Transparent">
+
+    <!--Боковая панель-->
+    <Border CornerRadius="10" Background="#f0f0f2">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <!--Left Menu-->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!--Меню иконки-->
+                <Button Style="{StaticResource topButton}" HorizontalAlignment="Left" Margin="20 28 0 35">
+                    <Icon:PackIconMaterial Kind="Menu" Width="15" Height="15" />
+                </Button>
+
+                <Border Grid.Row="1" Background="Black" CornerRadius="0 30 0 10">
+                    <DockPanel>
+
+                        <!--Меню логотип-->
+                        <Border Width="80" Height="80" Background="White" CornerRadius="100" DockPanel.Dock="Top" HorizontalAlignment="Left" Margin="50 -20 0 0">
+                            <Ellipse>
+                                <Ellipse.Fill>
+                                    <ImageBrush ImageSource="/Images/avatar.png"/>
+                                </Ellipse.Fill>
+                            </Ellipse>
+                        </Border>
+
+
+                        <!--Меню надпись-->
+                        <TextBlock x:Name="UsersName_TextBlock" Text="Users" Foreground="White" FontSize="22" FontWeight="SemiBold" DockPanel.Dock="Top" Margin="-25 5 0 3" TextAlignment="Center"/>
+
+                        <!--Меню палочка-->
+                        <Separator Margin="25" Background="White" DockPanel.Dock="Top" Height="0.9"/>
+
+                        <!--Menu кнопки-->
+                        <StackPanel DockPanel.Dock="Top" >
+                            <Button Click="ProfileButton_Click" Style="{StaticResource menuButton}" Background="#373737">
+                                <StackPanel Orientation="Horizontal">
+                                    <Icon:PackIconMaterial Kind="Account" Style="{StaticResource menuButtonIcon}"/>
+                                    <TextBlock Text="Личный кабинет"/>
+                                </StackPanel>
+                            </Button>
+
+                            <Button Click="CatalogButton_Click" Style="{StaticResource menuButton}">
+                                <StackPanel Orientation="Horizontal">
+                                    <Icon:PackIconMaterial Kind="folder" Style="{StaticResource menuButtonIcon}"/>
+                                    <TextBlock Text="Каталог"/>
+                                </StackPanel>
+                            </Button>
+
+                            <Button Click="BasketButton_Click" Style="{StaticResource menuButton}" Foreground="White">
+                                <StackPanel Orientation="Horizontal">
+                                    <Icon:PackIconMaterial Kind="basket" Style="{StaticResource menuButtonIcon}"/>
+                                    <TextBlock Text="Корзина"/>
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+
+                        <Button Click="Out_Click" Style="{StaticResource menuButton}" VerticalAlignment="Bottom" DockPanel.Dock="Bottom" Margin="15 0 15 20">
+                            <StackPanel Orientation="Horizontal">
+                                <Icon:PackIconMaterial Kind="Logout" Style="{StaticResource menuButtonIcon}"/>
+                                <TextBlock Text="Выйти"/>
+                            </StackPanel>
+                        </Button>
+                    </DockPanel>
+                </Border>
+            </Grid>
+
+            <!--Main Section-->
+            <Grid Grid.Column="1" Margin="30 20 20 20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+            </Grid>
+
+
+            <Border CornerRadius="30"  Background="#FFCBCBCB" Grid.Column="1" Margin="214,96,440,520">
+                <Button Click="Orders_Click" Background="Transparent" Style="{StaticResource topButton}" HorizontalAlignment="Center" Height="NaN" Width="218" Margin="0,0,0,34"/>
+            </Border>
+            <TextBlock Text="Заказы" FontSize="25" FontWeight="SemiBold" Foreground="White" Margin="280,102,514,585" Grid.Column="1"/>
+
+            <Border CornerRadius="30"  Background="Black" Grid.Column="1" Margin="31,96,666,520">
+                <Button Click="ProfileCancel_Click" Background="Transparent" Style="{StaticResource topButton}" HorizontalAlignment="Center" Height="NaN" Width="218" Margin="0,0,0,34"/>
+            </Border>
+            <TextBlock Text="Аккаунт" FontSize="25" FontWeight="SemiBold" Foreground="White" Margin="72,102,701,585" Grid.Column="1"/>
+
+
+            <Grid Grid.Column="1" Margin="0,145,0,59">
+                <Border CornerRadius="30" Background="White" Margin="29,0,32,-37">
+                    <Border.Effect>
+                        <DropShadowEffect BlurRadius="30" Color="#f1f1f3" ShadowDepth="0"></DropShadowEffect>
+                    </Border.Effect>
+                </Border>
+
+                <!--Заголовок-->
+                <TextBlock Text="История покупок" FontSize="38" FontWeight="SemiBold"  Foreground="#121518" HorizontalAlignment="Left" Width="336" Margin="67,24,0,430"/>
+                
+                    <!--Таблица-->
+                    <DataGrid x:Name="Basket_DataGrid"  AutoGenerateColumns="False" ItemsSource="{Binding YourDataCollection}" Margin="29,91,32,-37"
+                            RowStyle="{DynamicResource DataGridRowStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}" Background="White" BorderBrush="#FFDEE4EC">
+                        <DataGrid.Columns>
+                            <DataGridCheckBoxColumn Header="C" CanUserResize="False" Width="auto" ElementStyle="{StaticResource CheckBoxStyle1}">
+                                <DataGridCheckBoxColumn.HeaderTemplate>
+                                    <DataTemplate>
+                                        <CheckBox Style="{StaticResource CheckBoxStyle1}"/>
+                                    </DataTemplate>
+                                </DataGridCheckBoxColumn.HeaderTemplate>
+                            </DataGridCheckBoxColumn>
+
+                            <DataGridTextColumn Header="№" IsReadOnly="True" CanUserResize="False" Width="auto" Binding="{Binding CatalogID}"/>
+                            <DataGridTextColumn Header="Вид" Binding="{Binding TypeReptile}" IsReadOnly="True" Width="190"/>
+                            <DataGridTextColumn Header="Пол" Binding="{Binding SexReptile}" IsReadOnly="True" Width="100"/>
+                            <DataGridTextColumn Header="Морфа" Binding="{Binding MorphReptile}" IsReadOnly="True" Width="365"/>
+                            <DataGridTextColumn Header="Цена" Binding="{Binding CostReptile}" IsReadOnly="True" Width="90"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+            </Grid>
+
+            <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Grid.ColumnSpan="2"/>
+        </Grid>
+    </Border>
+</Page>
