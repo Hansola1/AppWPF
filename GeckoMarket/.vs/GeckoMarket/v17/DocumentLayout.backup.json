@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "D:\\\u0421# \u0421\u002B\u002B HTML\\C#\\AppWPF\\GeckoMarket\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4D49B1C0-F07B-4895-AEFB-BEB93D215893}|GeckoMarket\\GeckoMarket.csproj|d:\\\u0441# \u0441\u002B\u002B html\\c#\\appwpf\\geckomarket\\geckomarket\\views\\profilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{4D49B1C0-F07B-4895-AEFB-BEB93D215893}|GeckoMarket\\GeckoMarket.csproj|solutionrelative:geckomarket\\views\\profilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{4D49B1C0-F07B-4895-AEFB-BEB93D215893}|GeckoMarket\\GeckoMarket.csproj|d:\\\u0441# \u0441\u002B\u002B html\\c#\\appwpf\\geckomarket\\geckomarket\\views\\orderspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D49B1C0-F07B-4895-AEFB-BEB93D215893}|GeckoMarket\\GeckoMarket.csproj|solutionrelative:geckomarket\\views\\orderspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D49B1C0-F07B-4895-AEFB-BEB93D215893}|GeckoMarket\\GeckoMarket.csproj|d:\\\u0441# \u0441\u002B\u002B html\\c#\\appwpf\\geckomarket\\geckomarket\\views\\profilepage.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{4D49B1C0-F07B-4895-AEFB-BEB93D215893}|GeckoMarket\\GeckoMarket.csproj|solutionrelative:geckomarket\\views\\profilepage.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+      "AbsoluteMoniker": "D:0:0:{4D49B1C0-F07B-4895-AEFB-BEB93D215893}|GeckoMarket\\GeckoMarket.csproj|d:\\\u0441# \u0441\u002B\u002B html\\c#\\appwpf\\geckomarket\\geckomarket\\views\\placeorder.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{4D49B1C0-F07B-4895-AEFB-BEB93D215893}|GeckoMarket\\GeckoMarket.csproj|solutionrelative:geckomarket\\views\\placeorder.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D49B1C0-F07B-4895-AEFB-BEB93D215893}|GeckoMarket\\GeckoMarket.csproj|d:\\\u0441# \u0441\u002B\u002B html\\c#\\appwpf\\geckomarket\\geckomarket\\views\\orderspage.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{4D49B1C0-F07B-4895-AEFB-BEB93D215893}|GeckoMarket\\GeckoMarket.csproj|solutionrelative:geckomarket\\views\\orderspage.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D49B1C0-F07B-4895-AEFB-BEB93D215893}|GeckoMarket\\GeckoMarket.csproj|d:\\\u0441# \u0441\u002B\u002B html\\c#\\appwpf\\geckomarket\\geckomarket\\views\\orderspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{4D49B1C0-F07B-4895-AEFB-BEB93D215893}|GeckoMarket\\GeckoMarket.csproj|solutionrelative:geckomarket\\views\\orderspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{4D49B1C0-F07B-4895-AEFB-BEB93D215893}|GeckoMarket\\GeckoMarket.csproj|d:\\\u0441# \u0441\u002B\u002B html\\c#\\appwpf\\geckomarket\\geckomarket\\database\\dbcontroll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D49B1C0-F07B-4895-AEFB-BEB93D215893}|GeckoMarket\\GeckoMarket.csproj|solutionrelative:geckomarket\\database\\dbcontroll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,56 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "OrdersPage.xaml.cs",
               "DocumentMoniker": "D:\\\u0421# \u0421\u002B\u002B HTML\\C#\\AppWPF\\GeckoMarket\\GeckoMarket\\Views\\OrdersPage.xaml.cs",
               "RelativeDocumentMoniker": "GeckoMarket\\Views\\OrdersPage.xaml.cs",
               "ToolTip": "D:\\\u0421# \u0421\u002B\u002B HTML\\C#\\AppWPF\\GeckoMarket\\GeckoMarket\\Views\\OrdersPage.xaml.cs",
               "RelativeToolTip": "GeckoMarket\\Views\\OrdersPage.xaml.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAQwDYAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFQAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T16:50:07.373Z",
+              "WhenOpened": "2024-12-06T15:04:55.48Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ProfilePage.xaml.cs",
-              "DocumentMoniker": "D:\\\u0421# \u0421\u002B\u002B HTML\\C#\\AppWPF\\GeckoMarket\\GeckoMarket\\Views\\ProfilePage.xaml.cs",
-              "RelativeDocumentMoniker": "GeckoMarket\\Views\\ProfilePage.xaml.cs",
-              "ToolTip": "D:\\\u0421# \u0421\u002B\u002B HTML\\C#\\AppWPF\\GeckoMarket\\GeckoMarket\\Views\\ProfilePage.xaml.cs",
-              "RelativeToolTip": "GeckoMarket\\Views\\ProfilePage.xaml.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAUwEQAAAAlAAAAAAAAAA==",
+              "Title": "PlaceOrder.xaml.cs",
+              "DocumentMoniker": "D:\\\u0421# \u0421\u002B\u002B HTML\\C#\\AppWPF\\GeckoMarket\\GeckoMarket\\Views\\PlaceOrder.xaml.cs",
+              "RelativeDocumentMoniker": "GeckoMarket\\Views\\PlaceOrder.xaml.cs",
+              "ToolTip": "D:\\\u0421# \u0421\u002B\u002B HTML\\C#\\AppWPF\\GeckoMarket\\GeckoMarket\\Views\\PlaceOrder.xaml.cs",
+              "RelativeToolTip": "GeckoMarket\\Views\\PlaceOrder.xaml.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAE0AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T16:47:21.674Z",
+              "WhenOpened": "2024-12-06T14:50:10.379Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ProfilePage.xaml",
-              "DocumentMoniker": "D:\\\u0421# \u0421\u002B\u002B HTML\\C#\\AppWPF\\GeckoMarket\\GeckoMarket\\Views\\ProfilePage.xaml",
-              "RelativeDocumentMoniker": "GeckoMarket\\Views\\ProfilePage.xaml",
-              "ToolTip": "D:\\\u0421# \u0421\u002B\u002B HTML\\C#\\AppWPF\\GeckoMarket\\GeckoMarket\\Views\\ProfilePage.xaml",
-              "RelativeToolTip": "GeckoMarket\\Views\\ProfilePage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-28T16:05:15.57Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "OrdersPage.xaml",
-              "DocumentMoniker": "D:\\\u0421# \u0421\u002B\u002B HTML\\C#\\AppWPF\\GeckoMarket\\GeckoMarket\\Views\\OrdersPage.xaml",
-              "RelativeDocumentMoniker": "GeckoMarket\\Views\\OrdersPage.xaml",
-              "ToolTip": "D:\\\u0421# \u0421\u002B\u002B HTML\\C#\\AppWPF\\GeckoMarket\\GeckoMarket\\Views\\OrdersPage.xaml",
-              "RelativeToolTip": "GeckoMarket\\Views\\OrdersPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-28T16:34:38.04Z",
+              "DocumentIndex": 2,
+              "Title": "DBControll.cs",
+              "DocumentMoniker": "D:\\\u0421# \u0421\u002B\u002B HTML\\C#\\AppWPF\\GeckoMarket\\GeckoMarket\\DataBase\\DBControll.cs",
+              "RelativeDocumentMoniker": "GeckoMarket\\DataBase\\DBControll.cs",
+              "ToolTip": "D:\\\u0421# \u0421\u002B\u002B HTML\\C#\\AppWPF\\GeckoMarket\\GeckoMarket\\DataBase\\DBControll.cs",
+              "RelativeToolTip": "GeckoMarket\\DataBase\\DBControll.cs",
+              "ViewState": "AgIAAF4BAAAAAAAAAAAowHMBAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T09:50:40.364Z",
               "EditorCaption": ""
             }
           ]

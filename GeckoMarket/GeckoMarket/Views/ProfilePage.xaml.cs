@@ -1,6 +1,7 @@
 ﻿using GeckoMarket.DataBase;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input; // для KeyEventArgs e
 
 namespace GeckoMarket.Views
 {
@@ -87,6 +88,50 @@ namespace GeckoMarket.Views
         private void SetUsersNameLabel(string nameCurrent)
         {
             UsersName_TextBlock.Text = nameCurrent;
+        }
+
+        private void editName_Click(object sender, RoutedEventArgs e)
+        {
+            Name_TextBox.IsReadOnly = false;
+            Name_TextBox.Focus();
+        }
+        private void Name_TextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter) 
+            {
+                string nickname = Name_TextBox.Text;
+
+                DBControll db = new DBControll();
+
+                string loginCurrentUser = UserSession.CurrentUserLogin;
+                int? currentUserId = db.GetCurrentUserID(loginCurrentUser);
+
+                db.EditNameUsers(nickname, currentUserId);
+
+                Name_TextBox.IsReadOnly = true;
+            }
+        }
+
+        private void editPassword_Click(object sender, RoutedEventArgs e)
+        {
+            Password_TextBox.IsReadOnly = false;
+            Password_TextBox.Focus();
+        }
+        private void Password_TextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                string nickname = Password_TextBox.Text;
+
+                DBControll db = new DBControll();
+
+                string loginCurrentUser = UserSession.CurrentUserLogin;
+                int? currentUserId = db.GetCurrentUserID(loginCurrentUser);
+
+                db.EditPasswordUsers(nickname, currentUserId);
+
+                Password_TextBox.IsReadOnly = true;
+            }
         }
     }
 }

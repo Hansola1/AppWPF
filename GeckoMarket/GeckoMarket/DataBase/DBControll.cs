@@ -303,5 +303,104 @@ namespace GeckoMarket.DataBase
 
             return null;
         }
+
+        public void EditNameUsers(string nickname, int? UserID) 
+        {
+            Connection();
+
+            using (var transaction = sqlConnection.BeginTransaction())
+            {
+                try
+                {
+                    using (var basketCommand = new NpgsqlCommand("UPDATE public.\"Users\" SET \"nickname\" = @nickname WHERE \"UserID\" = @UserID", sqlConnection, transaction))
+                    {
+                        basketCommand.Parameters.AddWithValue("@nickname", nickname);
+                        basketCommand.Parameters.AddWithValue("@UserID", UserID);
+                        basketCommand.ExecuteNonQuery();
+                    }
+
+                    transaction.Commit(); 
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback(); 
+                    MessageBox.Show($"Ошибка при  изменении имени: {ex.Message}");
+                }
+            }
+        }
+
+        public void EditPasswordUsers(string password, int? UserID)
+        {
+            Connection();
+
+            using (var transaction = sqlConnection.BeginTransaction())
+            {
+                try
+                {
+                    using (var basketCommand = new NpgsqlCommand("UPDATE public.\"Users\" SET \"password\" = @password WHERE \"UserID\" = @UserID", sqlConnection, transaction))
+                    {
+                        basketCommand.Parameters.AddWithValue("@password", password);
+                        basketCommand.Parameters.AddWithValue("@UserID", UserID);
+                        basketCommand.ExecuteNonQuery();
+                    }
+
+                    transaction.Commit();
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    MessageBox.Show($"Ошибка при  изменении пароля: {ex.Message}");
+                }
+            }
+        }
+
+        public List<OrderData> GetOrdersItems(int? userID)
+        {
+            List<OrderData> items = new List<OrderData>();
+
+            Connection();
+
+            using (NpgsqlCommand command = new NpgsqlCommand("SELECT \"OrderID\", \"UsersID\", \"TypeReptile\", \"SexReptile\", \"MorphReptile\", \"CostReptile\" FROM public.\"Orders\" WHERE \"UsersID\" = @userID", sqlConnection))
+            {
+                command.Parameters.AddWithValue("@userID", userID);
+
+                using (var reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        items.Add(new OrderData(
+                            reader.GetInt32(0),
+                            reader.GetInt32(1), //UsersID
+                            reader.GetString(2),
+                            reader.GetString(3),
+                            reader.GetString(4),
+                            reader.GetInt32(5)
+                        ));
+                    }
+                }
+
+            }
+            return items;
+        }
+
+        public void AddToOrder(int? userID, string typeReptile, string sexReptile, string morphReptile, int costReptile)
+        {
+            Connection();
+
+            using (NpgsqlCommand command = new NpgsqlCommand())
+            {
+                command.Connection = sqlConnection;
+                command.CommandText = "INSERT INTO public.\"Orders\" (\"UsersID\", \"TypeReptile\", \"SexReptile\", \"MorphReptile\", \"CostReptile\") VALUES (@userID, @typeReptile, @sexReptile, @morphReptile, @costReptile)";
+                //command.Parameters.AddWithValue("@catalogID", catalogID); больше не храним айди товара из каталога, поскольку он удаляется вместе с товаром
+
+                command.Parameters.AddWithValue("@userID", userID);
+                command.Parameters.AddWithValue("@typeReptile", typeReptile);
+                command.Parameters.AddWithValue("@sexReptile", sexReptile);
+                command.Parameters.AddWithValue("@morphReptile", morphReptile);
+                command.Parameters.AddWithValue("@costReptile", costReptile);
+
+                command.ExecuteNonQuery();
+            }
+        }
     }
 }

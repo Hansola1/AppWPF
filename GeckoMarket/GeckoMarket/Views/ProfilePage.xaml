@@ -98,12 +98,12 @@
             </Grid>
 
 
-            <Border CornerRadius="30"  Background="Black" Grid.Column="1" Margin="214,96,440,520">
+            <Border CornerRadius="30"  Background="#FFCBCBCB" Grid.Column="1" Margin="214,96,440,520">
                 <Button Click="Orders_Click" Background="Transparent" Style="{StaticResource topButton}" HorizontalAlignment="Center" Height="NaN" Width="226" Margin="0,0,0,34"/>
             </Border>
             <TextBlock Text="Заказы" FontSize="25" FontWeight="SemiBold" Foreground="White" Margin="281,102,503,585" Grid.Column="1"/>
 
-            <Border CornerRadius="30"  Background="#FFCBCBCB" Grid.Column="1" Margin="31,96,666,520">
+            <Border CornerRadius="30"  Background="Black" Grid.Column="1" Margin="31,96,666,520">
                 <Button Background="Transparent" Click="ProfileCancel_Click" Style="{StaticResource topButton}" HorizontalAlignment="Center" Height="NaN" Width="184" Margin="0,0,0,34"/>
             </Border>
             <TextBlock Text="Аккаунт" FontSize="25" FontWeight="SemiBold" Foreground="White" Margin="72,102,701,585" Grid.Column="1"/>
@@ -119,15 +119,15 @@
                 <!--Заголовок-->
                 <TextBlock Text="Ваш аккаунт" FontSize="38" FontWeight="SemiBold"  Foreground="#121518" HorizontalAlignment="Left" Width="235" Margin="67,24,0,430"/>
 
-                <Button x:Name="editName_button" Style="{StaticResource topButton}" HorizontalAlignment="Left" Margin="625,130,0,333" Width="36">
+                <Button Click="editName_Click" Style="{StaticResource topButton}" x:Name="editName_button" HorizontalAlignment="Left" Margin="625,130,0,337" Width="47">
                     <Icon:PackIconMaterial Kind="Pen" Width="25" Height="25" />
                 </Button>
 
-                <Button x:Name="editPassword_button" Style="{StaticResource topButton}" HorizontalAlignment="Left" Margin="625,344,0,122" Width="36">
+                <Button Click="editPassword_Click" x:Name="editPassword_button" Style="{StaticResource topButton}" HorizontalAlignment="Left" Margin="625,344,0,122" Width="36">
                     <Icon:PackIconMaterial Kind="Pen" Width="25" Height="25" />
                 </Button>
 
-                <TextBlock Text="Имя:" FontSize="25"  Margin="0,130,0,341" Foreground="#121518" HorizontalAlignment="Center" Width="536"/>
+                <TextBlock Text="Имя:" FontSize="25"  Margin="-450,130,0,341" Foreground="#121518" HorizontalAlignment="Center" Width="94"/>
                 <TextBlock Text="Логин:" FontSize="25" Margin="168,200,0,262" Foreground="#121518" HorizontalAlignment="Left" Width="150"/>
                 <TextBlock Text="Почта:" FontSize="25"  Margin="168,270,0,0" Foreground="#121518" HorizontalAlignment="Left" Width="150"/>
                 <TextBlock Text="Пароль:" FontSize="25"  Margin="168,340,0,0" Foreground="#121518" HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5" Width="120">
@@ -138,10 +138,10 @@
                 </Border>
                 <TextBlock Text="Удалить аккаунт" FontSize="25" FontWeight="Bold" HorizontalAlignment="Left" Margin="228,455,0,21" TextAlignment="Center" Foreground="White" Width="309"/>
 
-                <TextBox IsReadOnly="True" Style="{StaticResource searchTextbox}" x:Name="Name_TextBox" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="329" Height="49"  Foreground="Black" Margin="20,130,0,0"/>
+                <TextBox IsReadOnly="True" KeyDown="Name_TextBox_KeyDown" Style="{StaticResource searchTextbox}" x:Name="Name_TextBox" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="329" Height="49"  Foreground="Black" Margin="20,130,0,0"/>
                 <TextBox IsReadOnly="True" Style="{StaticResource searchTextbox}" x:Name="Login_TextBox" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="329" Height="49"  Foreground="Black" Margin="20,200,0,0"/>
                 <TextBox IsReadOnly="True" Style="{StaticResource searchTextbox}" x:Name="Email_TextBox" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="329" Height="49"  Foreground="Black" Margin="20,270,0,0"/>
-                <TextBox IsReadOnly="True" Style="{StaticResource searchTextbox}" x:Name="Password_TextBox" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="329" Height="49"  Foreground="Black" Margin="20,340,0,0"/>
+                <TextBox IsReadOnly="True" KeyDown="Password_TextBox_KeyDown" Style="{StaticResource searchTextbox}" x:Name="Password_TextBox" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="329" Height="49"  Foreground="Black" Margin="20,340,0,0"/>
             </Grid>
 
             <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Grid.ColumnSpan="2"/>

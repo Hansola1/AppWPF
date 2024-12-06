@@ -18,9 +18,11 @@ namespace GeckoMarket.Views
 {
     public partial class OrdersPage : Page
     {
+        public List<OrderData> ordersData { get; set; } = new List<OrderData>();
         public OrdersPage()
         {
             InitializeComponent();
+            LoadOrdersItems();
             SetUsersNameLabel();
         }
 
@@ -49,6 +51,32 @@ namespace GeckoMarket.Views
             MainWindow mainWindow = new MainWindow();
             mainWindow.CloseProgramm();
         }
+
+
+        public void LoadOrdersItems()
+        {
+            if (UserSession.IsLoggedIn == false)
+            {
+                MessageBox.Show("Создайте аккаунт!!!");
+                MainFrame.Navigate(new RegistrationPage());
+            }
+            else
+            {
+                LoadOrdersItemsFromDatabase();
+            }
+        }
+
+        private void LoadOrdersItemsFromDatabase()
+        {
+            DBControll db = new DBControll();
+
+            string loginCurrentUser = UserSession.CurrentUserLogin;
+            int? CurrentUserId = db.GetCurrentUserID(loginCurrentUser);
+
+            ordersData = db.GetOrdersItems(CurrentUserId);
+            Orders_DataGrid.ItemsSource = ordersData;
+        }
+
 
         public void SetUsersNameLabel()
         {

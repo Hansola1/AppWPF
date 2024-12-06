@@ -98,12 +98,12 @@
             </Grid>
 
 
-            <Border CornerRadius="30"  Background="#FFCBCBCB" Grid.Column="1" Margin="214,96,440,520">
+            <Border CornerRadius="30"  Background="Black" Grid.Column="1" Margin="214,96,440,520">
                 <Button Click="Orders_Click" Background="Transparent" Style="{StaticResource topButton}" HorizontalAlignment="Center" Height="NaN" Width="218" Margin="0,0,0,34"/>
             </Border>
             <TextBlock Text="Заказы" FontSize="25" FontWeight="SemiBold" Foreground="White" Margin="280,102,514,585" Grid.Column="1"/>
 
-            <Border CornerRadius="30"  Background="Black" Grid.Column="1" Margin="31,96,666,520">
+            <Border CornerRadius="30"  Background="#FFCBCBCB" Grid.Column="1" Margin="31,96,666,520">
                 <Button Click="ProfileCancel_Click" Background="Transparent" Style="{StaticResource topButton}" HorizontalAlignment="Center" Height="NaN" Width="218" Margin="0,0,0,34"/>
             </Border>
             <TextBlock Text="Аккаунт" FontSize="25" FontWeight="SemiBold" Foreground="White" Margin="72,102,701,585" Grid.Column="1"/>
@@ -120,7 +120,7 @@
                 <TextBlock Text="История покупок" FontSize="38" FontWeight="SemiBold"  Foreground="#121518" HorizontalAlignment="Left" Width="336" Margin="67,24,0,430"/>
                 
                     <!--Таблица-->
-                    <DataGrid x:Name="Basket_DataGrid"  AutoGenerateColumns="False" ItemsSource="{Binding YourDataCollection}" Margin="29,91,32,-37"
+                    <DataGrid x:Name="Orders_DataGrid"  AutoGenerateColumns="False" ItemsSource="{Binding YourDataCollection}" Margin="29,91,32,-37"
                             RowStyle="{DynamicResource DataGridRowStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}" Background="White" BorderBrush="#FFDEE4EC">
                         <DataGrid.Columns>
                             <DataGridCheckBoxColumn Header="C" CanUserResize="False" Width="auto" ElementStyle="{StaticResource CheckBoxStyle1}">

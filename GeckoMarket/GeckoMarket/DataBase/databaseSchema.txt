@@ -4,29 +4,143 @@
 
 1. Таблица 1: Пользователи (Users)
    - UserID (int, PRIMARY KEY, AUTO_INCREMENT)
-   - Login (varchar, UNIQUE)
-   - Password (varchar)
-   - Email (varchar, UNIQUE)
+   - nickname (varchar)
+   - login (varchar, UNIQUE)
+   - password (varchar)
+   - email (varchar, UNIQUE)
 
 2. Таблица 2: Каталог (Catalog)
    - CatalogID (int, PRIMARY KEY, AUTO_INCREMENT)
-   - TypeReptile (varchar)
-   - MorphReptile (varchar)
-   - SexReptile (varchar)
-   - CostReptile (decimal) 
+   - typeReptile (varchar)
+   - sexReptile (varchar)
+   - morphReptile (varchar)
+   - costReptile (decimal) 
 
 3. Таблица 3: Корзина (Basket)
-   - BasketID (int, PRIMARY KEY, AUTO_INCREMENT)
-   - UserID (int, FOREIGN KEY -> Users.UserID)
+   - ID (int, PRIMARY KEY, AUTO_INCREMENT)
    - CatalogID (int, FOREIGN KEY -> Catalog.CatalogID)
-   - Quantity (int) // количество товара в корзине
+   - UserID (int, FOREIGN KEY -> Users.UserID)
+   - typeReptile (varchar)
+   - sexReptile (varchar)
+   - morphReptile (varchar)
+   - costReptile (decimal) 
 
+
+4. Таблица 4: Заказы (Orders)
+   - ID (int, PRIMARY KEY, AUTO_INCREMENT)
+   - CatalogID (int, FOREIGN KEY -> Catalog.CatalogID)
+   - UserID (int, FOREIGN KEY -> Users.UserID)
+   - typeReptile (varchar)
+   - sexReptile (varchar)
+   - morphReptile (varchar)
+   - costReptile (decimal) 
 
 Основные операции с БД:
 
 1. Добавление записей:
    - Пользователи могут создавать аккаунты, тем самым записывая новые данные в таблицу Users.
    - При добавлении товара в корзину пользователи добавляют записи в таблицу Basket.
+   - При покупке животного данные добавляются в таблицу Orders
 
 2. Удаление записей:
-   - При покупке животного вы можете удалять запись из таблицы Basket
+   - При покупке животного удаляется запись из таблицы Basket
+   - Пользователь может удалить аккаунт
+
+3. Изменение записей:
+   - Пользователь может изменять пароль, имя(никнейм). Даннфые изменяться в БД
+
+
+КОД БД "GeckoMarket"
+
+1. Таблица 1:
+-- Table: public.Users
+
+-- DROP TABLE IF EXISTS public."Users";
+
+CREATE TABLE IF NOT EXISTS public."Users"
+(
+    "UserID" integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    nickname text COLLATE pg_catalog."default" NOT NULL,
+    login text COLLATE pg_catalog."default" NOT NULL,
+    password text COLLATE pg_catalog."default" NOT NULL,
+    email text COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT "Users_pkey" PRIMARY KEY ("UserID")
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."Users"
+    OWNER to postgres;
+
+2. Таблица 2:
+-- Table: public.Catalog
+
+-- DROP TABLE IF EXISTS public."Catalog";
+
+CREATE TABLE IF NOT EXISTS public."Catalog"
+(
+    "CatalogID" integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    "typeReptile" text COLLATE pg_catalog."default" NOT NULL,
+    "sexReptile" text COLLATE pg_catalog."default" NOT NULL,
+    "morphReptile" text COLLATE pg_catalog."default" NOT NULL,
+    "costReptile" integer,
+    CONSTRAINT "Catalog_pkey" PRIMARY KEY ("CatalogID")
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."Catalog"
+    OWNER to postgres;
+
+3. Таблица 3:
+-- Table: public.Basket
+
+-- DROP TABLE IF EXISTS public."Basket";
+
+CREATE TABLE IF NOT EXISTS public."Basket"
+(
+    "ID" integer NOT NULL DEFAULT nextval('"Basket_ID_seq"'::regclass),
+    "CatalogID" integer NOT NULL,
+    "UsersID" integer NOT NULL,
+    "TypeReptile" text COLLATE pg_catalog."default" NOT NULL,
+    "SexReptile" text COLLATE pg_catalog."default" NOT NULL,
+    "MorphReptile" text COLLATE pg_catalog."default" NOT NULL,
+    "CostReptile" integer NOT NULL,
+    CONSTRAINT "Basket_pkey" PRIMARY KEY ("ID"),
+    CONSTRAINT "Basket_CatalogID_fkey" FOREIGN KEY ("CatalogID")
+        REFERENCES public."Catalog" ("CatalogID") MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION,
+    CONSTRAINT "Basket_UsersID_fkey" FOREIGN KEY ("UsersID")
+        REFERENCES public."Users" ("UserID") MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."Basket"
+    OWNER to postgres;
+
+
+4. Таблица 4:
+
+CREATE TABLE IF NOT EXISTS public."Orders"
+(
+    "OrderID" integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    "UsersID" integer NOT NULL,
+    "TypeReptile" text COLLATE pg_catalog."default" NOT NULL,
+    "SexReptile" text COLLATE pg_catalog."default" NOT NULL,
+    "MorphReptile" text COLLATE pg_catalog."default" NOT NULL,
+    "CostReptile" integer NOT NULL,
+    CONSTRAINT "Orders_pkey" PRIMARY KEY ("OrderID"),
+    CONSTRAINT "Orders_UsersID_fkey" FOREIGN KEY ("UsersID")
+        REFERENCES public."Users" ("UserID") MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."Orders"
+    OWNER to postgres;

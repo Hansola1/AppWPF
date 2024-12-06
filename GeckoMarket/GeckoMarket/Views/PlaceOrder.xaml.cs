@@ -76,8 +76,14 @@ namespace GeckoMarket.Views
         public void placeAnOrder(BasketData selectedItem)
         {
             DBControll db = new DBControll();
+
             int? BasketID = db.GetBasketID(selectedItem.CatalogID);
-    
+            //int? OrderID = db.GetOrderID(selectedItem.CatalogID);
+
+            string loginCurrentUser = UserSession.CurrentUserLogin;
+            int? CurrentUserId = db.GetCurrentUserID(loginCurrentUser);
+
+            db.AddToOrder(CurrentUserId, selectedItem.TypeReptile, selectedItem.SexReptile, selectedItem.MorphReptile, selectedItem.CostReptile); //BasketID.Value);
             db.DeleteOrder(selectedItem.CatalogID, BasketID.Value); //Value штоб не мучатся из-за инт?
         }
     }
